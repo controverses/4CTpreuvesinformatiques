@@ -4,7 +4,7 @@
 			<!--<img src='' alt='Picture'>-->
 		</div> <!-- cd-timeline-img -->
 
-		<div class='cd-timeline-content'>
+		<div class='cd-timeline-content' markdown="1">
 
 			## Découverte de la conjecture ##
 
