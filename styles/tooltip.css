@@ -1,0 +1,38 @@
+﻿/* www.menucool.com/tooltip/javascript-tooltip */
+
+/*For tooltip target element that has set class="tooltip" */
+.tooltip {font-weight: bold}
+
+/*For tooltip box*/
+#mcTooltip {
+    line-height:16px;
+    border-width: 0;
+    color: #F5F5F5;
+    padding: 2.5vh;
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 0.5vh;
+    background-color: #130E0A;
+}
+
+#mcTooltip h3 {
+    margin-top: 0;
+}
+
+#mcTooltip p {
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+#mcTooltip img {
+    display: none;
+}
+
+/*The settings below should remain unchanged*/
+#mcTooltipWrapper {position:absolute;visibility:hidden;overflow:visible;z-index:9999999999;top:-2000px;}
+#mcTooltip {float:left;border-style:solid;position:relative;overflow:hidden;}
+.mcTooltipInner {float:left;position:relative;width:auto;height:auto;}
+#mcttCo,  #mcttCo b{position:absolute;overflow:hidden;}
+
+/*compatible with bootstrap*/
+#mcTooltip, #mcTooltip div {box-sizing:content-box;}

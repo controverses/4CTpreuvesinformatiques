@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+#main {
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  background: red;
+}
+
+sidebar {
+  background-color: #130E0A;
+  width: 20vw;
+  height: 100vh;
+  font-size: 5em;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+
+.fixed {
+  position: fixed;
+}
+
+#timeline, sidebar {
+  font-size: 5em;
+}
+
+#timeline {
+  margin-left: 20vw;
+}

@@ -1,30 +1,92 @@
-#main {
-    margin-left: 20vw;
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #7f8c97;
+    background-color: #E9F0F5;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
+header {
+    width: 100%;
     height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: red;
+}
+
+#main {
+    height: 100vh;
+    position: relative;
+    top: 0;
 }
 
 sidebar {
     width: 20vw;
     height: 100vh;
+    background-color: #130E0A;
+    position: absolute;
     top: 0;
     left: 0;
-    background-color: #130E0A;
-    position: fixed;
     z-index: 1;
 }
 
-.timeline-content p {
-    text-align: justify;
+.fixed {
+    position: fixed;
+}
+
+sidebar h3 {
+    text-align: center;
+    font-size: 2em;
+    color: #E9F0F5;
+}
+
+#menu {
+    margin: auto;
+    padding-left: 1vw;
+}
+
+#menu a {
+    text-align: left;
+    font-size: 1.3em;
+    color: #E9F0F5;
+    text-decoration: none;
+}
+
+#main-page {
+    width: 80vw;
+    margin-left: 20vw;
+
 }
 
 #controverse-1976 {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
+    position: absolute; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 0;
+    top: 100vh;
     right: 0;
-    background-color: #111; /* Black*/
+    background-color: #130E0A;
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 1s;
 }
@@ -32,4 +94,40 @@ sidebar {
 #controverse-1976-container {
     opacity: 0;
     transition: opacity .5s;
+}
+
+
+
+#acteurs-container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #130E0A;
+}
+
+#acteurs-container h1 {
+    text-align: center;
+    font-size: 5em;
+    margin-top: 0;
+}
+
+#acteurs-container img {
+    width: 12vh;
+    float: left;
+    margin: 0 2vh 0;
+    border-radius: 0.5vh;
+}
+
+.acteur {
+    margin-bottom: 5vh;
+}
+
+.acteur h3 {
+    font-size: 2em;
+    margin: 1vh;
+}
+
+.acteur p {
+    font-size: 1.1em;
+    text-align: justify;
 }

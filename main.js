@@ -2,8 +2,6 @@ jQuery(document).ready(function($){
 	var timelineBlocks = $('.timeline-block'),
 		offset = 0.8;
 
-	console.log("ça marche");
-
 	//hide timeline blocks which are outside the viewport
 	hideBlocks(timelineBlocks, offset);
 
@@ -27,6 +25,7 @@ jQuery(document).ready(function($){
 	}
 });
 
+/*
 function openPage() {
 	document.getElementById('controverse-1976').style.width = '100%';
 	document.getElementById('controverse-1976-container').style.opacity = '1';
@@ -36,3 +35,37 @@ function closePage() {
 	document.getElementById('controverse-1976').style.width = '0';
 	document.getElementById('controverse-1976-container').style.opacity = '0';
 }
+*/
+
+/*
+
+$(window).scroll(function() {
+
+	console.log("scroll");
+
+    var scroll = $(window).scrollTop();
+
+     //>=, not <=
+    if (scroll >= 1000) {
+        //clearHeader, not clearheader - caps H
+		console.log("fixed");
+        $('#sidebar').addClass('fixed');
+    }
+    else {
+      $('#sidebar').removeClass('fixed');
+    }
+});
+
+*/
+
+var sidebar = document.getElementById('sidebar');
+window.addEventListener('scroll', function() {
+	var st = document.body.scrollTop,
+	mt = document.getElementById('main').offsetTop;
+	if (st > mt) {
+		sidebar.classList.add('fixed');
+	}
+	else {
+		sidebar.classList.remove('fixed');
+	}
+});
