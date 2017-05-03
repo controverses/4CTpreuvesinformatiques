@@ -60,12 +60,14 @@ $(window).scroll(function() {
 
 var sidebar = document.getElementById('sidebar');
 window.addEventListener('scroll', function() {
-	var st = document.body.scrollTop,
-	mt = document.getElementById('main').offsetTop;
-	if (st > mt) {
-		sidebar.classList.add('fixed');
-	}
-	else {
-		sidebar.classList.remove('fixed');
+	if (document.getElementById('main') != null) {
+		var st = document.body.scrollTop,
+		mt = document.getElementById('main').offsetTop;
+		if (st > mt) {
+			sidebar.classList.add('fixed');
+		}
+		else {
+			sidebar.classList.remove('fixed');
+		}
 	}
 });

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Etude de controverse : Le théorème des 4 couleurs et les preuves informatiques</title>
+        <meta name='viewport' content='initial-scale=1.0'>
+        <meta charset='utf-8'>
+        <link rel='icon' type='image/png' href='' />
+        <link rel='stylesheet' href='styles/main.css'>
+        <link rel='stylesheet' href='styles/tooltip.css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans' rel='stylesheet' type='text/css'>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+        <script src='https://controverses.github.io/4CTpreuvesinformatiques/libraries/modernizr.custom.js'></script>
+        <script src='https://controverses.github.io/4CTpreuvesinformatiques/libraries/tooltip.js'></script>
+        <script src='libraries/smooth-scroll.js'></script>
+        <script>
+            smoothScroll.init({speed: 1500, offset: 50});
+        </script>
+    </head>
+    <body>
+        <div id='left' class='margin'></div>
+        <div id='right' class='margin'></div>
+        <div id='reception-mathematiciens' class='container'>
+
+            <h1>La réception des mathématiciens <br /> à la preuve d’Appel, Haken et Koch</h1>
+
+            <div class='scrollable-container'>
+                <p>Lorsqu’Appel, Haken et Koch présentent leur preuve en 1976 lors du meeting d’été de la Société Américaine de Mathématiques, ils sont reçus par des applaudissements polis et peu enthousiastes. Pourtant, la communauté mathématique éprouvait à cette époque un intérêt intense pour la conjecture des quatre Couleurs et pour la recherche de sa preuve. <b>Le problème des quatre couleurs, du fait du paradoxe entre la simplicité de sa formulation et la complexité de la recherche de sa preuve, était en effet considéré comme un "man-eating problem", voir même pour certains comme "le problème irrésolu le plus fascinant des mathématiques"</b>. De fait, la preuve de cette conjecture aurait dû passionner la communauté, pourtant la plupart des mathématiciens restent sceptiques devant la preuve d’Appel et Haken, et ce pour différentes raisons.</p>
+
+                <p>Tout d’abord, la preuve de 1976 étant la première preuve utilisant une assistance informatique, <b>de nombreux mathématiciens s’opposent à la place importante jouée par l’ordinateur</b>. Pour Paul Halmos, l’un des mathématiciens les plus reconnus de l’époque, l’intervention de la machine dans la preuve est semblable à celle d’un oracle : selon lui, <i>"ce ne sont pas des mathématiques"</i>. Et en effet, beaucoup de mathématiciens critiquent le fait que l’utilisation d’un ordinateur dans la preuve empêche la relecture et la vérification d’une partie de l’argumentation. En 1982, Frank Bonsall affirme ainsi qu’une <i>"partie des arguments est cachée à l’intérieur d’une boîte"</i>. Selon eux, cela pose problème car des erreurs peuvent se cacher dans cette partie inaccessible de la preuve. Pierre Deligne, médaillé Fields en 1978, insiste sur ce point : <i>"Un ordinateur peut aussi faire des erreurs, mais elles sont bien plus difficiles à trouver"</i>. De plus, les mathématiciens, et les informaticiens, ont peur non seulement d’erreurs cachées, mais également d’un bug présent dans le programme qui aurait entraîné des résultats faux. Ainsi, à de nombreuses reprises des rumeurs se répandent quant à la présence d’un ou de plusieurs bugs, mais de nombreux experts vérifient les programmes et les refont tourner, sans qu’aucun bug majeur ne soit décelé.</p>
+
+                <p>Par ailleurs, <b>de nombreux autres mathématiciens s’insurgent contre le manque "d’élégance" de la preuve d’Appel, Haken et Koch</b>. L’élégance est un concept central dans la nature de la preuve, mais pourtant éminemment subjectif et dont chacun donne une définition différente. Néanmoins, le manque d’élégance de la preuve de 1976 est, pour les mathématiciens de l’époque, surtout due à deux raisons différentes. Tout d’abord, <b>c’est une <span class="tooltip" onmouseover="tooltip.pop(this, '<p>Pour démontrer quʼune propriété est vraie pour tout élément dʼun ensemble E, on peut démontrer successivement que cette propriété est vraie pour les éléments de sous-ensembles disjoints de E dont la réunion est E. On dit quʼon a raisonné par disjonction des cas.</p>')" style='color: #FFB300;'>preuve par disjonction de cas</span></b> : il s’agit de trouver le set inévitable de configurations puis de tester la réductibilité des presque 2000 configurations trouvées. Pour beaucoup de mathématiciens, cette méthode est tout simplement "laide" et beaucoup trop rustre et brute. Ils considèrent ainsi que la preuve de 1976 est monstrueuse et sans structure. Un mathématicien se plaint même à Appel et Haken: <i>"Dieu ne permettrait jamais que la meilleure preuve d’un si beau théorème soit si laide"</i>.</p>
+
+                <p>Par ailleurs, de manière générale, <b>une preuve est considérée élégante si elle permet d’apporter quelque chose en plus sur la compréhension du théorème</b>. Or, pour Paul Halmos, <i>"nous n’apprenons rien de cette preuve"</i>. En effet, la preuve de 1976 n’explique pas pourquoi seules quatre couleurs sont nécessaires, et non trois, cinq ou treize. Ainsi, certains mathématiciens considèrent qu’elle est "intellectuellement frustrante et incomplète". Appel et Haken eux-mêmes se prononcent sur le manque d’élégance de leur preuve : <i>"Face à une telle preuve, on peut excuser même le plus impartial des mathématiciens de souhaiter qu’elle disparaisse simplement plutôt que d’être obligé de penser au fait qu’une preuve élégante puisse ne jamais exister et qu’ainsi notre Eden soit profané"</i>. Cependant, pour Haken, puisqu’elle ne s’appuie pas sur une chaîne de raisonnement élégante et fragile, leur preuve en est certes inélégante mais elle en devient plus robuste et fiable.</p>
+
+                <p>En outre, <b>une dimension importante dans les critiques répondant à la preuve de Haken, Appel et Koch est la fracture générationnelle</b>. En effet, une division sous-jacente s’opère entre les mathématiciens de plus de quarante ans et ceux de moins de quarante ans : les plus âgés ne pouvaient pas se persuader qu’une preuve par ordinateur puisse être correcte, tandis que les plus jeunes ne pouvaient pas se convaincre qu’une preuve qui nécessite 700 pages de calcul à la main puisse être correcte. Edward Swart, travaillant lui-même sur une tentative de preuve du 4CT, commente ainsi : <i>"Je dirais que tout manque de fiabilité des preuves présentes du 4CT réside moins dans l’utilisation d’un ordinateur pour les tests de réductibilité et plus dans le fait qu’un ordinateur n’ait pas été utilisé pour créer le set inévitable de configurations"</i>. Ainsi si les mathématiciens plus âgés s’inquiètent de la présence de bugs dans les programmes de preuve, les plus jeunes se soucient quand à eux d’erreurs présentes dans la partie manuscrite de la preuve. Certaines sont d’ailleurs trouvées, mais Appel et Haken les corrigent rapidement.</p>
+
+                <p>Cependant, malgré une réponse mitigée de la preuve de 1976 par certains mathématiciens, beaucoup d’autres l’acceptent. En particulier, les experts du 4CT qui eux-mêmes en cherchaient une preuve, que ce soit Heinrich Heesch, Frank Allaire ou Jean Mayer (expert français du 4CT) considèrent la preuve de Haken, Appel et Koch comme juste et acceptable. La preuve reçoit même le soutien de William T. Tutte, l’un des plus grands experts en théorie des graphes de l’époque et rédacteur en chef du <i>Journal of Combinatorial Theory</i>.</p>
+
+                <p>De fait, la preuve du théorème des quatre couleurs de Haken, Appel et Koch fait face à sa sortie à des réponses divisées. Certains mathématiciens ne la considèrent même pas comme une preuve, d’autres n’approuvent pas l’utilisation de l’ordinateur dans les mathématiques, d’autres encore critiquent l’inélégance de la preuve, tandis que certains mathématiciens l’acceptent et la saluent. Néanmoins, <b>ce débat s’apaise rapidement quand l’intérêt de la communauté pour le problème des quatre couleurs s’atténue</b>, et bien qu’il apporte une réflexion sur la nature de la preuve en mathématiques, <b>ce débat chez les mathématiciens n’est pas si considérable que ça</b>.</p>
+            </div>
+
+            <p style='text-align: center;'><a data-scroll class='arrow' href='#arguments-tymoczko'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
+
+        </div>
+
+        <div id='arguments-tymoczko' class='container'>
+
+            <h1>L'élargissement de la controverse</h1>
+
+            <p><b>La preuve de 1976 est la première preuve d’un théorème mathématique utilisant l’outil informatique</b>. Elle a donc suscité de nombreuses critiques, notamment de la part des philosophes des sciences, et en premier
+                <a href='acteurs.html#tymoczko' target='_blank' style='text-decoration: none'>
+                    <span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#tymoczko')" style='color: #E53935'>Thomas Tymoczko.</span>
+                </a>
+            Dans son article "The Four Colour Theorem and its Philosophical Significance", publié en 1979, Tymoczko conteste ainsi la validité de la preuve de Appel, Haken et Koch, sur le fondement de différents arguments :</p>
+            <ul class='list-1'>
+                <li><b>Les théorèmes mathématiques sont connus <i>a priori</i></b>, les maths ne sont pas définies de manière empirique, et ne peuvent être prouvées par l’expérience. Ainsi, les théorèmes mathématiques sont certains au plus haut degré. Or, pour le théorème des quatre couleurs (4CT), la démonstration reste empirique, chaque configuration est testée par le programme informatique. Rien ne prouve que le programme s’exécute de manière conforme à la théorie. Pour Tymoczko, la preuve de 1976 du 4CT apportée par Appel et Haken n’est ainsi qu’un rapport d’expériences concluantes.</li>
+                <li><b>Par ailleurs, pour Tymoczko, une preuve doit répondre à trois critères essentiels :</b>
+                    <ul class='list-2'>
+                        <li><b>Une preuve doit être convaincante</b>. Cela est un fait brut pour lequel on ne peut pas donner d’explication, et pour lequel aucune explication est nécessaire. Pour Tymoczko, la preuve du 4CT de 1976 ne remet globalement pas ce critère en cause.</li>
+                        <li><b>Une preuve doit être vérifiable</b>. Un mathématicien, ou plus généralement tout agent rationnel, doit pouvoir être capable de la vérifier à la main. Le seul moyen pour un mathématicien de connaître un théorème est d’en vérifier la preuve dans sa totalité. Or dans le cas de la preuve de 1976, on ne peut pas relire et vérifier tous les détails de la preuve (l’ordinateur assemble des procédures qu’on lui soumet, on ne peut connaître le détail de l’assemblage). Pour Tymoczko, la preuve apportée par Appel et Haken se fonde sur un argument d’autorité.<br><br>
+                        Par ailleurs, le problème de vérifiabilité se pose en rapport à la longueur des preuves par ordinateur. Même si l’ordinateur permet de fournir une preuve entièrement détaillée, le problème de l’<i>a priori</i> subsiste. Philippe Kitcher souligne en 1983 que les preuves par ordinateur tendent à être tellement longues qu’un humain  ne peut se souvenir de chaque étape logique de la preuve, ce qui met à mal la vérifiabilité. Par ailleurs, <b>Harry Collins</b> appuie l’argument de Tymoczko en faisant intervenir le concept de "régression expérimentale". Il n’est pas possible de s’assurer que le programme a correctement exécuté les instructions.  Pour s’assurer qu’il n’y a pas eu de "bug" dans le programme, il faut donner une preuve que le programme de preuve a fonctionné correctement. Or il faut développer un programme pour cela, et c’est un cycle infini qui s’enclenche.</li>
+                        <li><b>Une preuve doit être formalisable</b>. Les axiomes de la logique doivent prouver les axiomes de la théorie desquels découlent les conclusions. Cependant, la preuve de 1976 présuppose la fiabilité de l’ordinateur et du programme, et ainsi "la formalisation vient après les faits" et non pas l’inverse. Il n’y a donc pas de preuve que cette preuve soit formelle étant donné qu’on considère dès le départ que le travail de l’ordinateur est formel, sans le prouver.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>De fait, <b>accepter la preuve du 4CT conduit pour Tymoczko à modifier la conception de preuve</b>. Cela implique d’accepter d’inclure de l’expérimentation dans les mathématiques. Or la distinction entre le domaine des mathématiques et celui des sciences expérimentales a toujours été affirmée et même revendiquée. Le simple fait d’inclure l’expérimentation par ordinateur introduit une notion probabiliste, ce qui revient à accepter la possibilité d’une erreur. Pour Tymoczko, accepter le 4CT s’apparente ainsi à une certaine "perte d’innocence" en abandonnant la quête du savoir absolu. La preuve par informatique s’éloigne de la conception traditionnelle de la preuve mathématique comme seule expérience de pensée. Cela implique aussi d’étendre les méthodes de preuve en incluant la preuve par assistance d’un ordinateur.</p>
+            <p style='text-align: center;'><a data-scroll class='arrow' href='#a-priori-a-posteriori'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
+        </div>
+
+        <div id='a-priori-a-posteriori' class='container'>
+            <h1><i>A priori</i> et <i>a posteriori</i></h1>
+
+            <p>C’est Emmanuel Kant qui en donne une définition dans sa <i>Critique de la Raison Pure.</i></p>
+
+            <p>Depuis l’Antiquité, on connaît deux types de jugements : les <b>jugements analytiques</b> (qui le sont par définition et n’étendent pas nos connaissances) et les <b>jugements synthétiques</b> (qui nécessitent un travail de raisonnement et nous apportent une information supplémentaires). Par exemple, "un triangle a trois angles" est un jugement analytique, tandis que "la Terre a un satellite" est un jugement synthétique.</p>
+
+            <p><b>L’originalité de Kant est de distinguer deux autres types de jugements</b> : les jugements <i>a priori</i> (qui se font dans notre tête) et a posteriori (qui se font par l’observation). Toutes les combinaisons sont possibles : le jugement cartésien "Je suis", par exemple, est synthétique et <i>a priori</i>.<br>
+            Selon Kant, tous les jugements mathématiques sont synthétiques <i>a priori</i>. Gottlob Frege, à la fin du XIX<sup>ème</sup> siècle, se met en tête de réformer la logique : selon lui, les raisonnements mathématiques ne servent qu’à rendre explicite ce qui est présent dès le départ dans les axiomes. Il montre ainsi qu’un jugement mathématique peut également être analytique <i>a priori</i>. Par la suite il y aura des débats sur le caractère analytique ou synthétique des mathématiques,  notamment avec la remise en cause du travail de Frege par les théorèmes d’incomplétude de Gödel et le théorème de Church, mais jamais sur son caractère <i>a priori</i> (qui en ferait sa spécificité par rapport aux sciences de la nature). La preuve de 1976 est à ce titre inédite.</p>
+
+            <p>De manière plus concrète, Roderick Chisholm considère qu’une preuve est <i>a priori</i> quand les propositions sont évidentes, qu’une compréhension directe de la preuve est possible. Cela implique que même les longues preuves mathématiques "humaines" ne sont pas <i>a priori</i>. La notion d’infaillibilité doit aussi rentrer en ligne de compte pour Philip Kitcher : si une expérience postérieure à la preuve la réfute, alors cela signifie que la preuve n’était pas <i>a priori</i>.</p>
+            <!--<p style='text-align: center; margin: 1em;'><iframe width='560' height='315' src='//video.upmc.fr/embed.php?collec=S_C_colloquium_lip6_2012&video=2' frameborder='0'></iframe></p>-->
+            <p style='text-align: center;'><a data-scroll class='arrow' href='#reponses'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a></p>
+        </div>
+
+        <div id='reponses' class='container'>
+
+            <h1>Les réponses des philosophes à Tymoczko</h1>
+
+            <p>Le principal argument de Tymoczko, justifiant le fait de ne pas considérer le 4CT comme une preuve, tient à son statut. Il considère que le 4CT ne constitue pas une preuve mathématique a priori. C’est sur ce point que Casey Rufener apporte une réponse, en expliquant dans quelle mesure le 4CT constitue bel et bien une preuve a priori.** L’idée centrale de cette affirmation est la notion d’<i>extended mind</i> ou <i>extended cognition</i>** (cognition étendue), où l’ordinateur est juste un outil permettant d’accroître les capacités du cerveau humain. Cela repose sur l’interaction entre l’intellect, le cerveau et l’environnement d’un individu. Rufener parle de <i>“relation symbiotique avec des entités non organiques”</i>. La notion d’<i>extended mind</i> s’appuie sur un certain nombre de concepts développés par les philosophes des sciences à la suite de Tymoczko.</p>
+
+            <p><b>William Calvin développe en 1990 le concept de <i>Darwin Machine</i></b>, ou machine de Darwin. Il réalise une analogie avec l’évolution, où la pensée (l’espèce) est soumise à un certain nombre de pressions extérieures du milieu. Cette pression force l’intellect à s’adapter, sélectionner la population de neurones la plus adaptée pour répondre aux contraintes du milieu. Cela va permettre à l’intellect de reconnaître des motifs, des schémas se répétant dans le milieu et le corps lui même qui lui permettront de résoudre le plus efficacement possible un problème posé. Dans un mécanisme comparable à la sélection naturelle, des “mutations d’idées” se produisent. Les meilleures idées sont sélectionnées pour la résolution de problèmes futurs. Ainsi, <b>la machine de Darwin met en avant l’idée que le cerveau, l’intellect ne fonctionne pas seul, mais en interaction avec l’environnement</b>.</p>
+
+            <p><b>Andy Clark et David Chalmers vont même plus loin en 1998 en avançant l’idée que certaines des fonctions clés de la pensée sont situées en dehors du crâne</b>. De cette façon, sans ces composantes extérieures, le système s’effondrerait. Ainsi, le processus de couplage avec ces éléments extérieurs compte autant que le processus cognitif en tant que tel. Le mécanisme est le même avec une machine : certaines de nos capacités cognitives sont transférées dans l’environnement extérieur, ici la machine. Celle-ci est donc à même de réaliser pour l’individu les tâches cognitives que lui-même s’épargne (idée de déchargement). La frontière entre organisme et environnement est ainsi estompée. <b>Clark et Chalmers définissent un certain nombre de critères qui permettent de définir quels objets “non biologiques” peuvent être inclus dans le système cognitif de l’individu (dans la “symbiose”)</b>. Tout d’abord, l’objet doit accompagner la vie de la personne, puis l’information détenue par l’objet doit être immédiatement disponible à la personne et enfin  l’individu doit sans difficulté avoir confiance en l’information issue de l’objet. <b>L’ordinateur n’effectue ainsi rien que le cerveau ne puisse accomplir par lui-même, mais à des niveaux jamais atteints auparavant</b>. L’ordinateur permet même de dépasser la capacité de résolution de problème de l’intellect fonctionnant seul. Même si l’ordinateur le dépasse, cela ne veut pas pour autant dire que l’humain ne résout plus le problème. L’ordinateur n’ajoute rien que l’individu ne connaisse. Il fonctionne par la distribution et la combinaison des tâches de l’intellect. Clark dira même que <i>“la cognition humaine est subordonnée à l’usage de la technologie en tant qu’outil cognitif”</i>.</p>
+
+            <p><b>Paul Teller souligne quant à lui la distinction entre le caractère faillible de l’ordinateur et la vérifiabilité</b>. En effet, pour l’auteur cette dernière n’est pas mise en péril par l’utilisation de l’ordinateur. La notion d’<i>extended mind</i> implique que l’utilisation de nouvelles méthodes de “surveillance” est comparable à l’utilisation d’outils cognitifs. Il s’agit d’un <i>“changement dans les méthodes pour vérifier la preuve et pas un changement dans la conception de la vérification”</i> selon Rufener. L’ordinateur utilise la même méthode qu’une personne utilisant son seul crayon, mais à une vitesse beaucoup plus importante. Si les méthodes sont justifiées <i>a priori</i> alors il y a garantie d’avoir une connaissance <i>a priori</i> de la preuve d’après Rufener.</p>
+
+            <p style='text-align: center;'><a data-scroll class='arrow' href='#controverse-pour-qui'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a></p>
+        </div>
+
+        <div id='controverse-pour-qui' class='container'>
+
+            <h1>Une controverse pour qui ?</h1>
+
+            <p>On a précédemment vu que les mathématiciens avaient eu des réponses mitigées face à la preuve du 4CT par Haken, Appel et Koch. Cependant <b>cette vision de la controverse est à remettre en perspective</b>. En effet, ce débat entre mathématiciens n’est à l’époque pas très virulent et s’atténue rapidement lorsque l’intérêt de la communauté mathématique se déplace vers d’autres sujets et problèmes. Ainsi, lorsque nous avons interrogé
+                <a href='acteurs.html#aubin' target='_blank'>
+                    <span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#aubin')" style='color: #1E88E5'>David Aubin</span>
+                </a>
+            , historien des sciences, sa réponse fut claire : <i>"À mon sens, il n’y a pas eu une énorme controverse sur la preuve du théorème des quatre couleurs"</i>.</p>
+
+            <p>Et en effet, <b>il est intéressant de replacer la réflexion sur la nature de la preuve mathématique qui a lieu en 1976 puis en 1979 dans un contexte plus global de redéfinition des critères d’une preuve</b>. Comme l’explique David Aubin lors de notre entretien : <i>"Le théorème des quatre couleurs, par cette preuve informatique, s’inscrit dans un processus d’assez long terme qui est une réflexion sur le statut de la preuve en mathématiques. Et ce statut de la preuve varie, dépendamment des époques. Tout au long du XX<sup>ème</sup> siècle, on peut dire que finalement, les critères de validité d’une preuve mathématiques, pour qu’elle soit acceptée de la communauté, se sont un petit peu relâchés par rapport à ce qu’on espérait pouvoir atteindre à la fin du XIXème siècle, ou même au début du XX<sup>ème</sup> siècle."</i> Ainsi, la preuve de 1976 n’a été qu’un choc temporaire et minime pour la plupart des mathématiciens, car les critères d’une preuve mathématique avaient déjà considérablement évolué depuis le début du siècle. Pour comprendre cela, il est important de connaître la "crise de la méthode axiomatique", pour reprendre l’expression du vulgarisateur Gilles Dowek, qui a lieu au début du siècle dernier.</p>
+
+            <p><b>A partir de la fin du XIX<sup>ème</sup> siècle, il y a une volonté d’harmoniser les mathématiques</b> : les travaux de Gottlob Frege, dont nous avons déjà parlé, poursuivent ce but, avec notamment l’invention des quantificateurs <i>il existe</i> (&exist;) et <i>pour tout</i> (&forall;). De même, dans les années 1920, le célèbre mathématicien allemand
+                <a href='acteurs.html#hilbert' target='_blank'>
+                    <span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#hilbert')" style='color: #2E7D32'>David Hilbert </span>
+                </a>
+            développe son "programme", qui entend fonder la théorie mathématique sur des bases solides, en démontrant notamment la cohérence de l’arithmétique. Cependant, le logicien
+                <a href='acteurs.html#russell' target='_blank'>
+                    <span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#russell')" style='color: #FFB300'>Bertrand Russell </span>
+                </a>
+            découvre en 1902 un paradoxe dans la logique de Frege : il imagine ainsi un ensemble R contenant tous les ensembles ne se contenant pas eux-mêmes, ce qui signifie que R ne se contient pas lui-même… et donc se contient lui même ! <b>Mais le coup de grâce est porté par
+                <a href='acteurs.html#godel' target='_blank'>
+                    <span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#godel')" style='color: #E53935'>Kurt Gödel </span>
+                </a>
+            en 1931</b>. Dans ses deux théorèmes d’incomplétude, ce dernier démontre que toute théorie mathématique est nécessairement incomplète, et qu’il n’est pas possible de montrer la cohérence d’une théorie au sein d’elle-même : <b>en bref, la connaissance absolue n’existe pas en mathématiques</b>.</p>
+
+            <p>Cette évolution de la logique au début du XX<sup>ème</sup> siècle, et en particulier les théorèmes d’incomplétude de Gödel, ont profondément influencé la logique mathématique et ont soulevé <b>un doute quant au fait qu’il ne puisse exister aucune preuve à des problèmes comme le 4CT, car ils seraient indécidables</b>. <i>"Donc, la certitude absolue de la preuve en mathématiques, à mon sens, la communauté en a fait son deuil depuis quand même assez longtemps</i>, comme le résume David Aubin.</p>
+
+            <p>De fait, cette évolution du statut de la preuve en mathématiques a non seulement permis à la controverse de 1976 d’exister (car sinon, la communauté mathématique aurait simplement pris Haken, Appel et Koch pour des fous), mais elle explique également pourquoi cette controverse n’est pas si intense chez les mathématiciens. Selon David Aubin, <i>"la notion de preuve en mathématiques avait déjà évolué de telle sorte que ces types de preuves puisse être acceptées sans trop de problèmes par la communauté"</i>.</p>
+
+            <p><b>On pourrait alors se demander si la "controverse" de 1976 et 1979 n’est pas plutôt un débat de sociologues et de philosophes, plutôt que de mathématiciens</b>. C’est en tout cas l’avis de Catherine Goldstein, historienne des sciences, qui nous écrit en réponse à l’un de nos mails : <i>"je pense qu’on a nettement surévalué la portée [de cette controverse] - mais évidemment cette surévaluation pourrait constituer un intéressant sujet de sociologie des maths"</i>.</p>
+
+            <p style='text-align: center;'><a data-scroll class='arrow' href='#'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a></p>
+
+        </div>
+
+
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+		<script src='main.js'></script>
+    </body>
+</html>
