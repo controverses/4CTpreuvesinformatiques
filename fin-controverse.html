@@ -23,78 +23,205 @@
             <div id='left' class='margin'></div>
             <div id='right' class='margin'></div>
 
-            <div id='naissance-controverse' class='container'>
+            <div id='assistants-preuve' class='container'>
 
                 <div class='centered-container'>
 
-                    <h1>La naissance de la controverse</h1>
+                    <h1>Qu'est ce qu'un assistant de preuve ?</h1>
 
                     <div class='text-container'>
-                        <p>Intro stylée</p>
+						<p>En informatique ou en mathématiques assistées par informatique, <b>un assistant de preuve est un logiciel permettant l'écriture et la vérification de preuves mathématiques</b>, soit sur des théorèmes au sens usuel des mathématiques, soit sur des assertions relatives à l'exécution de programmes informatiques. Il existe différents logiciels permettant de vérifier des preuves mathématiques et informatiques : Coq, Isabelle, Mizar, PhoX, PVS. Cependant nous nous concentrerons ici sur le logiciel Coq, car c'est celui utilisé par
+							<a href='acteurs.html#gonthier' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#gonthier')" style='color: #E53935'>Georges Gonthier </span>
+							</a>
+						pour vérifier la preuve de 1995. Chaque logiciel se base sur un langage de programmation particulier. Pour le logiciel Coq, il s'agit du langage Gallina.</p>
+
+						<p><b>Coq</b>, comme son nom l'indique, est un assistant de preuve français. En réalité, il s'agit de l'acronyme de <i>Calculus of Constructions</i>, et d'un jeu de mot vis-à-vis de l'inventeur du calcul de constructions, Thierry Coquand. <b>Coq est fondé sur la théorie des types et non sur la logique axiomatique classique</b>, ce qui signifie qu'il est nécessaire de redémontrer des propositions triviales ou très simples avant de pouvoir espérer prouver ce qui nous intéresse. L'avantage est que le script de preuve final est solide formellement, car il ne dépend pas d'axiomes qui pourraient être mal interprétés par le logiciel. Il est intéressant de remarquer que la logique à l'œuvre au sein de Coq emprunte à deux théories concurrentes du début du XX<sup>ème</sup> siècle : la <b>calculabilité</b> et la <b>constructivité</b>. La première correspond à la théorie des types développée par
+							<a href='acteurs.html#church' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#church')" style='color: #E53935'>Alonzo Church </span>
+							</a>
+						à la suite de
+							<a href='acteurs.html#russell' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#russell')" style='color: #E53935'>Russell</span>
+							</a>
+						et Whitehead, et repose sur le concept de <span class="tooltip" onmouseover="tooltip.pop(this, '<p>Système de calcul formel inventé par Alonzo Church dans le cadre de la théorie de la calculabilité, qui tire son nom de sa notation λx des fonctions. En lambda-calcul, tout est fonction, même les types ou les propositions, ce qui permet d'effectuer des calculs sur des énoncés mathématiques.</p>')" style='color: #E53935;'>lambda-calcul. </span>
+						La seconde est incarnée par la théorie des types intuitionniste de Per Martin-Löf, et se fonde sur la <span class="tooltip" onmouseover="tooltip.pop(this, '<p>Construire un témoin revient à prouver l'existence d'un objet en en trouvant un exemple. Il arrive parfois que l'on soit certain de l'existence d'un témoin, mais que celui-ci soit indécidable (on atteint là les limites du constructivisme mathématique).</p>')" style='color: #E53935;'>construction de témoins.</span></p>
+
+						<h3>Pourquoi les assistants de preuve ont-ils été créés ?</h3>
+
+						<p>Le premier projet d'assistant de preuve date de 1967. C'est le projet Automath du mathématicien néerlandais Nicolaas Govert de Bruijn dont le but était de formaliser des théories mathématiques complètes dans un langage informatique de manière à inclure un assistant de preuve qui pouvait en vérifier la correction. Si le système Automath apportait de nombreuses notions novatrices qui ont été adoptées ou réinventées ultérieurement, il faut cependant attendre les années 1990-2000 pour que les assistants de preuve commencent à se développer. On peut déterminer trois grands facteurs explicatifs du développement des assistants de preuve.</p>
+						<ul>
+							<li>
+								<p><b>Le facteur économique</b><br/>
+									Le développement fulgurant de l'informatique et de la micro informatique dans les années 1990 a nécessité de nouveaux logiciels pour prouver que les systèmes d'exploitations produit par des entreprises comme Microsoft ne présentaient pas de bug. Il est ainsi à noter que Georges Gonthier a longtemps travaillé grâce aux financements de l'entreprise Microsoft.</p>
+							</li>
+							<li>
+								<p><b>L'enjeu du développement des assistants de preuve face aux limites du <i>peer reviewing</i></b><br />
+									Le développement des preuves formelles est en partie lié aux limites du <i>peer reviewing</i> traditionnel. Ce système est basé sur le contrôle de la communauté scientifique, qui vérifie les preuves soumises par des confrères. Cependant, cela ne garantit pas la correction systématique des erreurs. En effet,
+										<a href='acteurs.html#mahboubi' target='_blank'>
+											<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#mahboubi')" style='color: #E53935'>Assia Mahboubi </span>
+										</a>
+										nous a ainsi rappelé en entretien que dans les domaines de maths "pures", sans calculs spécifiques à vérifier, <b>le niveau de technicité était tel qu'une minorité de mathématiciens seulement était susceptible de pouvoir vérifier une preuve</b>. Peu de personnes sont en réalité en mesure de faire la relecture des preuves publiées. D'après Assia Mahboubi, la réputation de l'auteur est un facteur important de la validation de la preuve, plus que la relecture. Il est ainsi très courant que des "papiers faux" soient publiés dans les revues scientifiques spécialisées. Les limites du <i>peer reviewing</i> sont ainsi une des raisons principales du développement des assistants de preuve tels que Coq, qui peuvent permettre de systématiser la vérification et de limiter le nombre d'erreurs. Par ailleurs, l'utilisation d'assistants de preuve pourrait décharger les mathématiciens d'une partie de la relecture des articles de leurs collègues, travail souvent jugé chronophage vis-à-vis de leur recherches personnelles. <i>"Il y a très peu de gens qui sont en mesure de faire une relecture experte de certains sujets et puis il y a la réputation de l'auteur qui joue. Enfin ce sont tout un tas de facteurs qui font qu'il y a plein de papiers faux."</i> (Assia Mahboubi)
+								</p>
+							</li>
+							<li>
+								<p><b>L'assistant de preuve comme solution face à la multiplication des preuves géantes</b><br />
+									La nécessité des assistants de preuve s'est enfin fait sentir avec la multiplication des preuves dites "géantes" dépassant la centaine de pages et ne pouvant être que difficilement relues par une seule personne. On pourra citer de manière non exhaustive la preuve du théorème de Feit-Thompson rédigée en 1963 , la preuve de la conjecture de Kepler rédigée en 1998, faisant plus de 300 pages chacunes, ou encore la preuve du dernier théorème de Fermat publiée par Andrew J. Wiles en 1993.</p>
+							</li>
+						</ul>
                     </div>
 
-                    <p style='text-align: center;'><a data-scroll class='arrow' href='#accessibilite-assistants-preuve'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
+                    <p style='text-align: center;'><a data-scroll class='arrow' href='#travail-gonthier'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
 
                 </div>
 
             </div>
 
-            <div id='accessibilite-assistants-preuve' class='container'>
+			<div id='travail-gonthier' class='container'>
 
                 <div class='centered-container'>
 
-                    <h1>Quels sont les enjeux de la recherche sur l’accessibilité des assistants de preuve ?</h1>
+                    <h1>La preuve de Gonthier</h1>
 
                     <div class='text-container'>
+						<p>Le travail effectué de Georges Gonthier et de son équipe a été de transcrire la preuve du théorème des quatre couleurs de 1995 dans le langage Gallina, pour être vérifiée par le logiciel Coq. Cette tâche qui peut paraître simple au premier abord demandé plusieurs mois de travail à Georges Gonthier et à toute son équipe.</p>
 
-                            <p>Le domaine assistants de preuve voit le développement d’une nouvelle branche de recherche. De plus en plus de scientifiques travaillent sur les moyens dont les assistants de preuve tels que Coq peuvent être rendus plus accessibles. En effet, si <b>Gonthier</b> a permis de créer un consensus sur la preuve de 1995 du théorème des quatre couleurs, il a aussi ouvert le champ d’application de Coq. La vérification de la preuve de 1995 par Coq n’est qu’une étape du développement potentiel des applications possibles des assistants de preuve. Cependant, l’obstacle principal à ce développement est le problème de l’accessibilité du langage et du fonctionnement des assistants de preuve.  La plupart des mathématiciens ne sont pour l’instant pas en mesure d’utiliser des assistants tels que Coq pour la vérification de preuve. </p>
+						<h3>Retour sur la preuve de 1995</h3>
 
-                            <p><b>L’enjeu du développement des assistants de preuve face aux limites du peer review:</b> </p>
+						<p>La preuve produite par Robertson, Saunders, Seymour et Thomas en 1995 se décompose en deux parties. La première partie consiste en un article de 35 pages démontrant que la démonstration du théorème revient à analyser 633 configuration et à effectuer 1&nbsp;000&nbsp;000&nbsp;000 de coloriages différents sur 10&nbsp;000 cartes. La seconde est un programme écrit en langage C traitant les différents cas énoncés plus haut. Le problème était de s'assurer que le programme écrit en C corresponde bien à la description mathématique énoncée dans l'article et que le contenu même de l'article soit juste.</p>
 
-                            <p>Le développement des preuves formelles est en partie lié aux limites du peer review traditionnel. Ce système est basé sur le contrôle de la communauté scientifique, qui vérifie les preuves soumises par des confrères. Cependant, cela ne garantit pas la correction systématique des erreurs. En effet, <b>Assia Mahboubi</b> nous a ainsi rappelé en entretien que dans les domaines de maths “pures”, sans calculs spécifiques à vérifier, le niveau de technicité était tel qu’une minorité de mathématiciens seulement était susceptible de pouvoire vérifier une preuve. Peu de personnes sont en réalité en mesure de faire la relecture des preuves publiées. D’après <b>Assia Mahboubi</b>, la réputation de l’auteur est un facteur important de la validation de la preuve, plus que la relecture. Il est ainsi très courant que des “papiers faux” soient publiés dans les revues scientifiques spécialisées. Les limites du <i>“peer reviewing”</i> sont ainsi une des raisons principales du développement des assistants de preuve tels que Coq, qui peuvent permettre de systématiser la vérification et de limiter le nombre d’erreurs.</p>
+						<h3>Le travail de Georges Gonthier</h3>
 
-                            <p><i>“Il y a très peu de gens qui sont en mesure de faire une relecture experte de certains sujets et puis il y a la réputation de l’auteur qui joue. Enfin ce sont tout un tas de facteurs qui font qu’il y a plein de papiers faux.”</i> <b>Assia Maboubi</b></p>
+						<p>La difficulté du travail de Georges Gonthier n'est pas en réalité d'avoir transcrit le programme de preuve écrit en langage C en programme Coq, travail qui n'a pris que quelque mois, mais de formaliser un script de preuve Coq pour l'article de 35 pages. En effet tout article de mathématiques mobilise des savoirs tacites acquis par ceux qui les lisent lors de leurs années d'études. <b>Le travail de l'équipe de Georges Gonthier a donc été de trouver une formalisation rigoureuse des définitions des concepts les plus simples, dont la transcription en script Coq nécessite cependant une recherche mathématique intense</b>. Cette formalisation s'attaque à des résultats aussi simple que l'affirmation 1 + 1 = 2.</p>
 
-                            <p><b>Les enjeux de l’accessibilité des assistants de preuve:</b></p>
+						<p>La conséquence de ce travail est la certification de la justesse des liens logiques entre les arguments de la partie manuscrite de la preuve et l'assurance de l'absence de bugs dans le code en C. Pour plus d'informations sur le travail de Georges Gonthier et de son équipe nous vous invitons à regarder un extrait d'une de ses conférences au sujet de sa vérification de la preuve du 4CT. <i>(du début jusqu'à 18:50)</i></p>
 
-                            <p>Si le sujet principal de préoccupation réside dans la probabilité d’erreurs dans les publications, le problème est différent pour la vérification formelle par les assistants. Quand Coq vérifie une preuve informatique, le rapport final donné par l’assistant de preuve n’est pas rédigé de manière compréhensible pour un mathématicien. C’est pour cette raison que des travaux sont menés pour rendre Coq plus accessible et intelligible.</p>
-
-                            <p><b>Théo Zimmermann</b>, avec lequel nous nous sommes entretenus, travaille justement sur ces problématiques. Selon lui, l’enjeu est de rendre le rapport final produit et les “scripts de preuve” par Coq vérifiable par un mathématicien sans avoir à utiliser Coq. Il explique ainsi qu’actuellement, le travail sur l'accessibilité des assistants de preuve  n’est pas à un stade assez avancé pour que des personnes non expertes puissent vérifier une preuve.
-                            L’enchaînement de blocs de bases que constitue le script final de Coq devrait pouvoir être traduit en un langage similaire à celui des revues scientifiques. Le problème du langage se pose aussi lorsque des preuves “traditionnelles” sont vérifiées par les assistants de preuve. <b>Assia Mahboubi</b> indique ainsi que les papiers de preuve mathématique contiennent en définitive peu de symboles et que l’implicite tient beaucoup de place. Il y a des conventions et des notations propres à chaque discipline mathématique, et dont le caractère subtil implique une signification différente selon le contexte. Certaines notions restent par ailleurs vagues, car elles constituent des éléments de culture partagée des mathématiques. Dès lors, il devient assez complexe de s’assurer que l’assistant de preuve prenne bien en compte tous ces paramètres. Il est donc assez fastidieux de formaliser une preuve car il faut beaucoup détailler pour que l’assistant puisse accepter la preuve. Herman Geuvers parle ainsi d’un “gap” entre les preuves telles qu’elles sont publiées dans les revues et les preuves compréhensibles pour un ordinateur. </p>
-
-                            <p>L’enjeu de l’accessibilité de l’assistant de preuve n’est pas seulement lié à la compréhension et la vérification. L’accessibilité est intimement liée à la communication et au langage. <b>Théo Zimmermann</b> a ainsi souligné qu’une preuve est avant tout “un objet de communication”, la preuve doit pouvoir être compréhensible et claire pour pouvoir faire consensus. Le critère de conviction est ainsi un des principaux attributs de la preuve selon <b>Tymoczko</b>. <b>Assia Mahboubi</b> souligne ainsi qu’il reste difficile pour “l’oeil humain” de se convaincre d’une preuve dans le langage formel de l’assistant. </p>
-
-                            <p><b>Herman Geuvers</b> opère quant à lui une distinction entre convaincre et expliquer. Il souligne le fait que les preuves mathématiques “traditionnelles” attribuent autant d’importance au détail mathématique en tant que tel qu’à l’explication, puisque la conviction est liée à la compréhension de celui qui parcourt la preuve. Il écrit ainsi que les assistants de preuve <i>“vérifient bien mais expliquent mal”</i>, le problème réside dans la communication. <b>Robert Pollack</b> va dans le même sens en exprimant le fait que la conviction en une preuve relève d’une dimension intimement personnelle, qu’il n’est donc pas possible de complètement formaliser. Pour lui, la conviction en une preuve par informatique soulève deux problèmes principaux : un problème formel qui relève de la justesse des calculs, et un problème informel pour s’assurer que les liens entre propositions sont logiques. <b>Pollack</b> souligne bien l’importance de la confiance et de la compréhension en l’assistant de preuve pour le problème formel. En effet, l’acceptation de la preuve passe pour lui  en premier par la confiance en l’assistant, qui est plus facile à obtenir que la compréhension de la preuve elle-même. </p>
-
-                            <p><b>Callude et Müller</b> détaillent ainsi des <i>“symptômes de compréhension”</i> pour matérialiser la distinction entre les deux notions. Pour ce qui est des preuves formelles, la compréhension implique pour eux la capacité à modifier le programme si celui ci ne fonctionne pas par exemple. La compréhension est ainsi pour eux le principal obstacle aux preuves formelles, car il n’est pas possible de vérifier humainement la preuve. Cela renforce donc l’importance de la clarté et l’accessibilité des assistants de preuve, qui deviennent les seuls accès possibles à la compréhension de la preuve.
-                                C’est pour cette raison que les deux chercheurs plaident pour le développement d’<i>”environnements actifs de preuve”</i> (active proof environment), constitués d’un assistant de preuve (type Coq) et d’une interface intelligente. Cela permet aux utilisateurs de questionner les preuves formelles pour en obtenir une meilleure compréhension. Ils suggèrent pour cette interface, l’automatisation de chaque étape de preuve, la construction d’analogies, d’exemples, le développement de preuves alternatives, des illustrations visuelles. Les suggestions montrent ainsi que la compréhension, par extension la conviction d’une preuve, joue sur de nombreux tableaux, qui concourent tous à rendre l’assistant plus accessible. </p>
-
-                            <p><b>Le paradoxe de l’accessibilité:</b>
-                        Rendre accessible un assistant de preuve tel que Coq confronte les spécialistes à un certain paradoxe. En voulant développer l’assistant de preuve afin que le script final et que son utilisation soit plus lisible et intelligible, le risque de bugs peut potentiellement être augmenté. En effet, développer le noyau de l’assistant induit forcément une probabilité d’erreurs plus grande. Pour altérer le fonctionnement du programme, il faudrait que le bug potentiel soit exploité de telle sorte à rendre le résultat final invalide. Cela correspondrait par exemple  à valider quelque chose ne correspondant pas à la preuve de départ. <b>Assia Mahboubi</b> relativise cependant le risque, en expliquant que la probabilité d’une telle occurrence est infinitésimale. </p>
-
-                        </div>
-
-                        <p style='text-align: center;'><a data-scroll class='arrow' href='#arguments-tymoczko'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
-
-                </div>
-
-            </div>
-
-            <div id='arguments-tymoczko' class='container'>
-
-                <div class='centered-container'>
-
-                    <h1>L'élargissement de la controverse</h1>
-
-                    <div class='text-container'>
-                        <p>Wallah c'est chaud</p>
+						<p style='text-align: center; margin: 1em'><iframe width='560' height='315' src='//video.upmc.fr/embed.php?collec=S_C_colloquium_lip6_2012&video=2' frameborder='0'></iframe></p>
                     </div>
 
-                    <p style='text-align: center;'><a data-scroll href='#a-priori-a-posteriori'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
+                    <p style='text-align: center;'><a data-scroll href='#controverse-fermee'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
 
                 </div>
 
             </div>
+
+			<div id='controverse-fermee' class='container'>
+
+                <div class='centered-container'>
+
+                    <h1>Peut-on considérer la controverse comme fermée ?</h1>
+
+                    <div class='text-container'>
+						<p>En 1976, la controverse autour de la preuve de Haken et Appel se structurait autour de deux problèmes. L'un était <b>formel</b> et portait sur la présence ou non d'erreurs dans la partie manuscrite et de "bugs" dans la partie informatique. L'autre était <b>informel</b> et s'articulait autour de la nature même d'une preuve mathématique. Le travail de l'équipe de Georges Gonthier rend peu à peu le premier problème en partie obsolète.</p>
+
+						<p><b>Tom à faire</b></p>
+
+						<p>Ainsi, pour
+							<a href='acteurs.html#pollack' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#pollack')" style='color: #E53935'>Robert Pollack</span>
+							</a>
+						, l'émergence des assistants de preuve décale le problème de la confiance dans la preuve. Il ne s'agit plus de comprendre et de croire dans la preuve papier et dans les liens logiques qu'elle décrit, mais de <b>comprendre comment fonctionne le noyau de l'assistant de preuve</b>. En cela, accepter une preuve serait réductible à la question de la confiance dans l'assistant de preuve, et à la question de la réplicabilité de la vérification de la preuve par plusieurs mathématiciens. Le débat autour du théorème se recentre alors autour de la définition de la nature d'une preuve mathématique</b>. La question est ici de savoir si l'arrivée de l'informatique révolutionne véritablement la manière de faire et de définir une preuve mathématique.</p>
+
+						<h3>L'importance de la notion de consensus</h3>
+
+						<p>La preuve de 2004 par Georges Gonthier semble clôturer la controverse quant à l'acceptation d'une preuve informatisée du 4CT, non seulement car elle met fin aux problèmes techniques présents jusqu'alors, mais également parce qu'elle est consensuellement acceptée par la communauté mathématique. <b>Cette notion éminnement sociale de consensus est centrale et primordiale dans l'acceptation d'une preuve</b>.
+							<a href='acteurs.html#aubin' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#aubin')" style='color: #E53935'>David Aubin </span>
+							</a>
+						l'évoque très clairement lors de notre entretien : <i>"Ce qui est important dans une preuve mathématique, ce n'est pas nécessairement qu'elle soit absolument certaine, mais bien qu'elle soit acceptée par une communauté"</i>. De même,
+							<a href='acteurs.html#szczeciniarz' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#szczeciniarz')" style='color: #E53935'>	Jean-Jacques Szczeciniarz </span>
+							</a>
+					 	insiste sur ce point : <i>"Pour les mathématiciens, est essentielle la question de la forme d'adhésion, de la conviction que la preuve l'emporte, et c'est toute la communauté qui se met d'accord."</i> Une preuve ne tient donc pas uniquement à un aspect purement mathématique et théorique. Pour certains philosophes des mathématiques, la preuve est même indissociable de cette étape du consensus. Nicolas Balacheff, chercheur en informatique, donne ainsi dans "Processus de preuve et situations de validation" la définition suivante de la preuve: <i>"Nous appelons preuve une explication acceptée par une communauté donnée à un moment donné"</i>. De même, Yuri Manin, mathématicien renommé, affirme en 1977 qu'un argument devient une preuve après l'acte social de l'accepter en tant que preuve.</p>
+
+						<p>De fait, <b>si la preuve de 1976 d'Appel, Haken et Koch est restée controversée, c'est parce qu'elle ne fait pas l'adhésion de la communauté mathématique</b>, tandis que la preuve de Georges Gonthier a fait consensus et a été globalement acceptée par la communauté. Ainsi, cette preuve de Georges Gonthier peut marquer la clôture de la controverse autour des preuves du 4CT justement parce qu'elle est considérée comme juste et correcte par une majorité de la communauté mathématique. Par ailleurs, la majorité des personnes que nous avons interrogées ont précisé qu'elles ne considéraient pas qu'il y ait encore une controverse aujourd'hui (voire doutent que cette controverse ait jamais existé). David Aubin affirme par exemple : <i>"A mon sens, il n'y a pas une énorme controverse sur la preuve du 4CT"</i>. <b>La controverse de ce point de vue semble donc fermée, et notamment parce qu'il y a consensus sur la preuve de Gonthier.</b></p>
+
+						<p>Cependant, la notion de consensus elle-même a des implications qui amènent à réfléchir sur la fermeture de la controverse autour des preuves du 4CT. En effet, <b>étant donné qu'une preuve a besoin d'être acceptée pour être considérée comme telle, elle doit avant tout être comprise</b>. Comme l'explique Théo Zimmermann : <i>"Une preuve est avant tout un objet de communication. Il faut pouvoir convaincre son assistance que le théorème est correct. Cela tient plus au langage et à la communication avec les autres"</i>. Jean-Jacques Szczeciniarz insiste également sur ce point : <i>"Une fois qu'une preuve a été trouvée, il y a un re-travail qui se fait sur la preuve et qui peut durer assez longtemps, pour la simplifier un maximum afin qu'elle puisse être comprise et transmise par et auprès de non-spécialistes"</i>. Ainsi comme le suggère Szczeciniarz, <b>la question du consensus autour de l'acceptation d'une preuve est liée à l'accessibilité et à l'intelligibilité de ladite preuve</b>. A titre d'exemple sur cette question, Zimmermann évoque le mathématicien Shinichi Mochizuki, qui, après des mois de travail solitaire, publie une preuve de la conjecture ABC (un célèbre problème en arithmétique) sur près de 500 pages. Cependant sa preuve est extrêmement compliquée, et utilise un langage et des outils que lui-même a créés et qu'il refuse d'expliquer plus en avant. Alors que de nombreux mathématiciens essaient de reprendre et de comprendre cette preuve, se pose la question de savoir si cette preuve en est bien une, car s'il n'y a pas de consensus, peut-il y avoir une preuve ? Cet exemple montre l'importance de thèmes comme <b>l'élégance, le langage ou l'accessibilité d'une preuve</b>.</p>
+
+						<p><b>De fait, bien que la controverse sur les preuves du 4CT semble avoir été fermée par la preuve de Gonthier, celle-ci fait actuellement l'objet d'un travail de simplification</b>, notamment en ce qui concerne Coq. Cela nous amène à nous interroger sur la fermeture de cette controverse. Ainsi, pour Assia Mahboubi, la controverse n'est pas encore fermée car il reste encore, entres autres, le problème de l'accessibilité de Coq, qui rend la preuve de Gonthier encore illisible pour bon nombre de personnes incompétentes sur l'utilisation de Coq. <b>Il est alors intéressant de se questionner non plus sur la fermeture de la controverse étudiée jusque-là mais plutôt sur sa mutation</b>.</p>
+					</div>
+
+                    <p style='text-align: center;'><a data-scroll href='#caractere-explicatif-preuve'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
+
+                </div>
+
+            </div>
+
+			<div id='caractere-explicatif-preuve' class='container'>
+
+                <div class='centered-container'>
+
+                    <h1>Le caractère explicatif de la preuve</h1>
+
+                    <div class='text-container'>
+						<p>Lors de nos entretiens, une caractéristique fondamentale de l'acceptation d'une preuve a été énoncée par plusieurs de nos interlocuteurs. C'est celle du caractère explicatif de la preuve. Au delà de la validation d'un théorème, <b>une preuve mathématique doit en effet apporter des informations supplémentaires permettant une meilleur compréhension des objets mathématiques mobilisés dans le théorème.</b></p>
+
+						<p>Un problème se pose avec des preuves sous forme de grande disjonction de cas traités informatiquement puis vérifiés par un assistant de preuve. En effet, <b>la taille de la preuve et de sa vérification sont telles que le lecteur mathématicien lambda est obligé de ne considérer uniquement le résultat booléen donné par l'ordinateur</b> : soit la preuve est vraie, soit la preuve est fausse. Selon
+							<a href='acteurs.html#dagand' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#dagand')" style='color: #E53935'>	Pierre-Evariste Dagand </span>
+							</a>
+						: <i>"Gonthier a pris des preuves qui étaient énormes, et ils les a vérifiées par ordinateur ; mais à la fin, il n'a pas trouvé que la preuve était fausse, donc est-ce qu'on a gagné quelque chose ? Je ne sais pas."</i></p>
+
+						<p>Georges Gonthier se défend de cette affirmation. Selon lui, <b>le travail de redéfinition rigoureuse de concepts mathématiques en langage Gallina apporte de nouvelles connaissances mathématiques sur les objets mobilisés dans la preuve</b>. Un exemple simple de l'apport de la formalisation dans la compréhension des objets mathématique est la définition formelle d'une carte. En effet, tout le monde sait à quoi ressemble visuellement l'affirmation "on colorie une carte,  et pourtant il semble difficile de définir mathématiquement la notion de carte. Dans la preuve de 1995, la notion de carte est réduite à celle de graphe. Cependant la notion de graphe ne remplit pas les conditions nécessaire pour décrire une carte planaire. La preuve de 1995 mêle donc des notions de mathématiques combinatoires et de topologie pour parvenir à la démonstration, ce qui est impossible à exprimer formellement par ordinateur. Un des apports de Georges Gonthier est donc d'avoir défini rigoureusement le concept de carte. <b>Cependant l'accessibilité à ces définitions et au travail fourni par Georges Gonthier reste en partie conditionnée au problème de la maîtrise du logiciel Coq.</b></p>
+                    </div>
+
+                    <p style='text-align: center;'><a data-scroll href='#accessibilite-assistant-preuve'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a></p>
+
+                </div>
+
+			</div>
+
+			<div id='accessibilite-assistants-preuve' class='container'>
+
+                <div class='centered-container'>
+
+                    <h1>L'enjeu de l'accessibilité des assistants de preuve</h1>
+
+                    <div class='text-container'>
+						<p>Le domaine des assistants de preuve voit le développement d'une nouvelle branche de recherche. De plus en plus de scientifiques travaillent sur les moyens dont les assistants de preuve tels que Coq peuvent être rendus plus accessibles. En effet, si Gonthier a permis de créer un consensus sur la preuve de 1995 du théorème des quatre couleurs, il a aussi ouvert le champ d'application de Coq. <b>La vérification de la preuve de 1995 par Coq n'est qu'une étape du développement potentiel des applications possibles des assistants de preuve.</b> Cependant, l'obstacle principal à ce développement est le problème de l'accessibilité du langage et du fonctionnement des assistants de preuve. La plupart des mathématiciens ne sont pour l'instant pas en mesure d'utiliser des assistants tels que Coq pour la vérification de preuve.</p>
+
+						<h3>Les enjeux de l'accessibilité des assistants de preuve</h3>
+
+						<p>Si le sujet principal de préoccupation réside dans la possibilité d'erreurs dans les publications scientifiques, le problème est différent pour la vérification formelle par les assistants. Quand Coq vérifie une preuve informatique, le rapport final donné par l'assistant de preuve n'est pas rédigé de manière compréhensible pour un mathématicien. C'est pour cette raison que des travaux sont menés pour rendre Coq plus accessible et intelligible.</p>
+						<p>
+							<a href='acteurs.html#zimmermann' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#zimmermann')" style='color: #E53935'> Théo Zimmermann</span>
+							</a>
+						, avec lequel nous nous sommes entretenus, travaille justement sur ces problématiques. Selon lui, <b>l'enjeu est de rendre le rapport final produit et les "scripts de preuve" par Coq vérifiables par un mathématicien sans avoir à utiliser Coq</b>. Il explique ainsi qu'actuellement, le travail sur l'accessibilité des assistants de preuve  n'est pas à un stade assez avancé pour que des personnes non expertes puissent vérifier une preuve. L'enchaînement de blocs de bases que constitue le script final de Coq devrait pouvoir être traduit en un langage similaire à celui des revues scientifiques.</p>
+
+						<p>Le problème du langage se pose aussi lorsque des preuves "traditionnelles" sont vérifiées par les assistants de preuve.
+							<a href='acteurs.html#mahboubi' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#mahboubi')" style='color: #E53935'> Assia Mahboubi </span>
+							</a>
+						indique ainsi que <b>les publications concernant les preuves mathématiques contiennent en définitive peu de symboles et que l'implicite tient beaucoup de place</b>. Il y a des conventions et des notations propres à chaque discipline mathématique, et dont le caractère subtil implique une signification différente selon le contexte. Certaines notions restent par ailleurs vagues, car elles constituent des éléments de culture partagée des mathématiques. Dès lors, il devient assez complexe de s'assurer que l'assistant de preuve prenne bien en compte tous ces paramètres. Il est donc assez fastidieux de formaliser une preuve car il faut beaucoup détailler pour que l'assistant puisse accepter la preuve. Herman Geuvers, chercheur en informatique, parle ainsi d'un <i>gap</i> entre les preuves telles qu'elles sont publiées dans les revues et les preuves compréhensibles pour un ordinateur.</p>
+						<p>L'enjeu de l'accessibilité de l'assistant de preuve n'est pas seulement lié à la compréhension et la vérification. L'accessibilité est intimement liée à la communication et au langage. Théo Zimmermann a ainsi souligné qu'<b>une preuve est avant tout "un objet de communication", la preuve doit pouvoir être compréhensible et claire pour pouvoir faire consensus</b>. Le critère de conviction est ainsi un des principaux attributs de la preuve selon Tymoczko. Assia Mahboubi souligne ainsi qu'il reste difficile pour <i>"l'oeil humain"</i> de se convaincre d'une preuve dans le langage formel de l'assistant.</p>
+
+						<p>Herman Geuvers opère quant à lui une distinction entre convaincre et expliquer. Il souligne le fait que les preuves mathématiques "traditionnelles" attribuent autant d'importance au détail mathématique en tant que tel qu'à l'explication, puisque <b>la conviction est liée à la compréhension de celui qui parcourt la preuve</b>. Il écrit ainsi que les assistants de preuve <i>"vérifient bien mais expliquent mal"</i>, le problème réside dans la communication.
+							<a href='acteurs.html#pollack' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#pollack')" style='color: #E53935'>Robert Pollack </span>
+							</a>
+						va dans le même sens en exprimant le fait que <b>la conviction en une preuve relève d'une dimension intimement personnelle, qu'il n'est donc pas possible de complètement formaliser</b>. Pour lui, la conviction en une preuve par informatique soulève deux problèmes principaux : un problème formel qui relève de la justesse des calculs et des liens logiques entre les propositions, et un problème informel, qui relève du consensus, de la croyance en la preuve. Pollack souligne bien l'importance de la confiance et de la compréhension en l'assistant de preuve : en effet, l'acceptation de la preuve passe en premier par la confiance en l'assistant, qui est plus facile à obtenir que la compréhension de la preuve elle-même.</p>
+
+						<p>Callude et Müller détaillent ainsi des <i>"symptômes de compréhension"</i> pour matérialiser la distinction entre les deux notions. Pour ce qui est des preuves formelles, la compréhension implique pour eux la capacité à modifier le programme si celui ci ne fonctionne pas par exemple. La compréhension est ainsi pour eux le principal obstacle aux preuves formelles, car il n'est pas possible de vérifier humainement la preuve. <b>Cela renforce donc l'importance de la clarté et l'accessibilité des assistants de preuve, qui deviennent les seuls accès possibles à la compréhension de la preuve.</b> C'est pour cette raison que les deux chercheurs plaident pour le développement d'<b>"environnements actifs de preuve"</b> (<i>active proof environments</i>), constitués d'un assistant de preuve (type Coq) et d'une interface intelligente. Cela permettrait aux utilisateurs de questionner les preuves formelles pour en obtenir une meilleure compréhension. Ils suggèrent pour cette interface l'automatisation de chaque étape de preuve, la construction d'analogies et d'exemples, le développement de preuves alternatives et d'illustrations visuelles. Les suggestions montrent ainsi que la compréhension, par extension la conviction d'une preuve, joue sur de nombreux tableaux, qui concourent tous à rendre l'assistant plus accessible.</p>
+
+						<p>De manière plus concrète, des solutions sont déjà développées pour permettre l'utilisation de Coq par les domaines civils, comme l'industrie. Nicolas Tabareau, chercheur à l'Inria, travaille sur les moyens d'<b>amener l'industrie à utiliser un assistant de preuve comme Coq</b>. En 2015, le chercheur s'est vu octroyer une bourse du Conseil Européen de Recherche (ERC) pour étudier comment les récents travaux de
+							<a href='acteurs.html#voevodsky' target='_blank'>
+								<span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#voevodsky')" style='color: #E53935'> Vladimir Voevodsky </span>
+							</a>
+						sur la théorie des types peuvent permettre de développer Coq. Dans cette optique, un compilateur formellement vérifié du language de l'assistant de preuve est déjà opérationnel, et permet d'apporter une preuve aux industriels que le programme utilisé se comportera de manière conforme à la sémantique du code source. Dans un entretien, le chercheur raconte que son projet suscite beaucoup d'intérêt dans la communauté scientifique, et que son travail s'effectue en collaboration active avec le créateur de Coq, Thierry Coquand.  Le but est de pouvoir créer une nouvelle version de Coq, pour que le logiciel puisse être enseigné en école d'ingénieur et utilisé en recherche et développement.</p>
+
+						<h3>Le paradoxe de l'accessibilité</h3>
+
+						<p>Rendre accessible un assistant de preuve tel que Coq confronte les spécialistes à un certain paradoxe. <b>En voulant développer l'assistant de preuve afin que le script final et que son utilisation soit plus lisible et intelligible, le risque de bugs peut potentiellement être augmenté</b>. En effet, développer autour du noyau de l'assistant induit forcément une probabilité d'erreurs plus grande. Cependant, pour altérer le fonctionnement du programme, il faudrait que le bug potentiel soit exploité de telle sorte à rendre le résultat final invalide. Cela correspondrait par exemple à faire croire à l'utilisateur qu'il a démontré ce qu'il cherchait, alors que c'est tout autre chose que le logiciel a prouvé. Assia Mahboubi et Théo Zimmermann relativisent ainsi le risque, en expliquant que la probabilité d'une telle occurrence est infinitésimale.</p>
+                    </div>
+
+                        <p style='text-align: center;'><a data-scroll class='arrow' href='#elegance'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
+
+                </div>
+
+            </div>
+
+
 
             <div id='a-priori-a-posteriori' class='container'>
 

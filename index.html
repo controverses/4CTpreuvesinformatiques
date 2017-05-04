@@ -15,10 +15,7 @@
         <script src='https://controverses.github.io/4CTpreuvesinformatiques/libraries/tooltip.js'></script>
         <script src='https://controverses.github.io/4CTpreuvesinformatiques/libraries/smooth-scroll.js'></script>
         <script>
-            smoothScroll.init({selector:'[data-scroll-0]', speed: 1500, offset: 0});
-        </script>
-        <script>
-            smoothScroll.init({selector:'[data-scroll]', speed: 1500, offset: 50});
+            smoothScroll.init({speed: 1500, offset: 50});
         </script>
     </head>
     <body>
@@ -27,7 +24,8 @@
 
     		<header>
                 <div id='intro'>
-                    <h1 style='text-align: center;'>Le théorème des quatre couleurs et les preuves informatiques (titre nul à changer)</h1>
+                    <h1 style='text-align: center;'>Le théorème des quatre couleurs et les preuves informatisées</h1>
+					<h2 style='text-align: center;'>Ou pourquoi prouver un théorème qui ne sert à rien ?</h2>
                     <p>Le théorème des quatre couleurs est un problème mathématique qui n’a presque aucune application pratique. Son énoncé affirme que quatres couleurs différentes suffisent pour colorier n'importe quelle carte découpée en <span class="tooltip" onmouseover="tooltip.pop(this, '<p>Une région est dite connexe si elle est &quoten un seul morceau&quot. Par exemple, la France nʼest pas une région connexe, mais la France continentale si.</p>')" style='color: #E53935;'>régions connexes</span>, de sorte que deux régions limitrophes, c'est-à-dire ayant toute une frontière en commun et non simplement un point, reçoivent toujours deux couleurs distinctes.</p>
                     <p>Pourtant la “preuve” de ce théorème réalisée par Kenneth Appel et Wolfgang Haken en 1976 a partagé la communauté scientifique car elle se base sur une très grande disjonction de cas traités par informatique. C’est en effet la première “preuve” mathématique à avoir été réalisée à l’aide d’un ordinateur en raison de l’ampleur des calculs à réaliser. Elle s’oppose en cela aux preuves dites “conventionnelles” dont la production et la relecture ne nécessite que du papier et un crayon.</p>
                     <p>Un consensus semble avoir été trouvé en 2004, lorsque l’équipe de Georges Gonthier et Benjamin Werner a vérifié informatiquement la justesse d’une preuve du théorème énoncée en 1995. Cependant l’opposition entre preuve “conventionnelle” et preuve “automatisée” persiste si bien que des mathématiciens cherche toujours une preuve “conventionnelle” au théorème. En cela le théorème des quatre couleurs pose la question suivante :</p>
@@ -147,7 +145,7 @@
 
                 				<div class='timeline-content'>
                 					<h2>Première utilisation de l'informatique</h2>
-                					<p>Dans la continuité de Heinrich Heesch, Karl Dürre écrit un programme pour déterminer la <span class="tooltip" onmouseover="tooltip.pop(this, '<p>La D-réduction est un algorithme ramenant le problème de coloriage d’une carte à un problème de coloriage par récurrence d’un anneau de 4-couleurs autour d’une configuration donnée.</p>')" style='color: #1E88E5;'>D-réductibilité</span> dans le langage de programmation ALGOL 60. Le programme lui permet aussi  de vérifier des configurations de Kempe plus complexes.</p>
+                					<p>Dans la continuité de Heinrich Heesch, Karl Dürre écrit un programme pour déterminer la <span class="tooltip" onmouseover="tooltip.pop(this, '<p>La D-réduction est un algorithme ramenant le problème de coloriage d’une carte à un problème de coloriage par récurrence d’un anneau de 4 couleurs autour d’une configuration donnée.</p>')" style='color: #1E88E5;'>D-réductibilité</span> dans le langage de programmation ALGOL 60. Le programme lui permet aussi  de vérifier des configurations de Kempe plus complexes.</p>
                 					<span class='date'>1965</span>
                 				</div> <!-- timeline-content -->
 
@@ -240,7 +238,7 @@
 
                                 <div class='timeline-content'>
                                     <h2>Un premier consensus</h2>
-                                    <p>Robertson, Saunders, Seymour et Thomas présentent une amélioration de la preuve de Appel, Haken et Koch : ils optimisent l’analyse et remarquent que l’étude des 633 configurations mises en évidence en 1993 suffit. De plus l’étude des 10 000 cartes et des 1 000 000 000 de coloriages peut se faire avec des programmes en langage C. Ceux-ci sont beaucoup plus compréhensibles et rapides : en trois heures la tâche est effectuée alors qu’il avait fallu deux mois et demi à Appel et Haken pour aboutir au même résultat.</p>
+                                    <p>Robertson, Saunders, Seymour et Thomas présentent une amélioration de la preuve de Appel, Haken et Koch : ils optimisent l’analyse et remarquent que l’étude des 633 configurations mises en évidence en 1993 suffit. De plus l’étude des 10&nbsp;000 cartes et des 1&nbsp;000&nbsp;000&nbsp;000 de coloriages peut se faire avec des programmes en langage C. Ceux-ci sont beaucoup plus compréhensibles et rapides : en trois heures la tâche est effectuée alors qu’il avait fallu deux mois et demi à Appel et Haken pour aboutir au même résultat.</p>
                                     <p>Ils publient finalement un article de 35 pages compréhensible et lisible qui établit une forme de consensus au sein de la communauté scientifique.</p>
                                     <span class='date'>1995</span>
                                 </div> <!-- timeline-content -->
@@ -255,7 +253,10 @@
 
                 				<div class='timeline-content'>
                 					<h2>La fin de la controverse ?</h2>
-                					<p>Georges Gonthier et Benjamin Werner convertissent la preuve précédente sur le logiciel Coq, en remplaçant les programmes C par un script de preuve. Cela leur permet de démontrer la validité de la preuve de 1995 : la controverse semble fermée.</p>
+                					<p>
+										<a href='acteurs.html#gonthier' target='_blank'>
+                                            <span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#gonthier')" style='color: #E53935'>Georges Gonthier </span>
+                                        </a>et Benjamin Werner convertissent la preuve précédente sur le logiciel Coq, en remplaçant les programmes C par un script de preuve. Cela leur permet de démontrer la validité de la preuve de 1995 : la controverse semble fermée.</p>
                                     <p style='color:#7f8c97; text-align: center; font-size: 1.5em;'><a class='animsition-link' data-animsition-out-class="fade-out-up" data-animsition-out-duration="800" href='fin-controverse.html'><b>Est-ce vraiment le cas ?</b></a></p>
                 					<span class='date'>2004</span>
                 				</div> <!-- timeline-content -->

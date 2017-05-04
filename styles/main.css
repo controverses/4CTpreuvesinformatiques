@@ -10,7 +10,7 @@ html * {
 }
 
 body {
-    font-size: 1.1em;
+    font-size: 1.6vmin;
     font-family: 'Roboto Condensed', sans-serif;
     color: #7f8c97;
     background-color: #E9F0F5;
@@ -52,6 +52,7 @@ header {
     transform: translate(-50%, -50%);
     background-color: #E9F0F5;
     padding: 2%;
+	overflow-y: auto;
 }
 
 #intro p {
@@ -206,7 +207,7 @@ sidebar h3 {
 
 
 #acteurs-container {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     font-family: 'Roboto Condensed', sans-serif;
     color: #7f8c97;
