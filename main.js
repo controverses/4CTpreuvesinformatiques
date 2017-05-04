@@ -25,38 +25,6 @@ jQuery(document).ready(function($){
 	}
 });
 
-/*
-function openPage() {
-	document.getElementById('controverse-1976').style.width = '100%';
-	document.getElementById('controverse-1976-container').style.opacity = '1';
-}
-
-function closePage() {
-	document.getElementById('controverse-1976').style.width = '0';
-	document.getElementById('controverse-1976-container').style.opacity = '0';
-}
-*/
-
-/*
-
-$(window).scroll(function() {
-
-	console.log("scroll");
-
-    var scroll = $(window).scrollTop();
-
-     //>=, not <=
-    if (scroll >= 1000) {
-        //clearHeader, not clearheader - caps H
-		console.log("fixed");
-        $('#sidebar').addClass('fixed');
-    }
-    else {
-      $('#sidebar').removeClass('fixed');
-    }
-});
-
-*/
 
 var sidebar = document.getElementById('sidebar');
 window.addEventListener('scroll', function() {

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Etude de controverse : Le théorème des 4 couleurs et les preuves informatiques</title>
+        <meta name='viewport' content='initial-scale=1.0'>
+        <meta charset='utf-8'>
+        <link rel='icon' type='image/png' href='' />
+        <link rel='stylesheet' href='styles/main.css'>
+        <link rel='stylesheet' href='styles/tooltip.css'>
+        <link rel='stylesheet' href='styles/animsition.css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans' rel='stylesheet' type='text/css'>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+        <script src='https://controverses.github.io/4CTpreuvesinformatiques/libraries/modernizr.custom.js'></script>
+        <script src='https://controverses.github.io/4CTpreuvesinformatiques/libraries/tooltip.js'></script>
+        <script src='libraries/smooth-scroll.js'></script>
+        <script>
+            smoothScroll.init({speed: 1500, offset: 0});
+        </script>
+    </head>
+    <body>
+        <div class='animsition'>
+
+            <div id='left' class='margin'></div>
+            <div id='right' class='margin'></div>
+
+            <div id='naissance-controverse' class='container'>
+
+                <div class='centered-container'>
+
+                    <h1>La naissance de la controverse</h1>
+
+                    <div class='text-container'>
+                        <p>Intro stylée</p>
+                    </div>
+
+                    <p style='text-align: center;'><a data-scroll class='arrow' href='#accessibilite-assistants-preuve'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
+
+                </div>
+
+            </div>
+
+            <div id='accessibilite-assistants-preuve' class='container'>
+
+                <div class='centered-container'>
+
+                    <h1>Quels sont les enjeux de la recherche sur l’accessibilité des assistants de preuve ?</h1>
+
+                    <div class='text-container'>
+
+                            <p>Le domaine assistants de preuve voit le développement d’une nouvelle branche de recherche. De plus en plus de scientifiques travaillent sur les moyens dont les assistants de preuve tels que Coq peuvent être rendus plus accessibles. En effet, si <b>Gonthier</b> a permis de créer un consensus sur la preuve de 1995 du théorème des quatre couleurs, il a aussi ouvert le champ d’application de Coq. La vérification de la preuve de 1995 par Coq n’est qu’une étape du développement potentiel des applications possibles des assistants de preuve. Cependant, l’obstacle principal à ce développement est le problème de l’accessibilité du langage et du fonctionnement des assistants de preuve.  La plupart des mathématiciens ne sont pour l’instant pas en mesure d’utiliser des assistants tels que Coq pour la vérification de preuve. </p>
+
+                            <p><b>L’enjeu du développement des assistants de preuve face aux limites du peer review:</b> </p>
+
+                            <p>Le développement des preuves formelles est en partie lié aux limites du peer review traditionnel. Ce système est basé sur le contrôle de la communauté scientifique, qui vérifie les preuves soumises par des confrères. Cependant, cela ne garantit pas la correction systématique des erreurs. En effet, <b>Assia Mahboubi</b> nous a ainsi rappelé en entretien que dans les domaines de maths “pures”, sans calculs spécifiques à vérifier, le niveau de technicité était tel qu’une minorité de mathématiciens seulement était susceptible de pouvoire vérifier une preuve. Peu de personnes sont en réalité en mesure de faire la relecture des preuves publiées. D’après <b>Assia Mahboubi</b>, la réputation de l’auteur est un facteur important de la validation de la preuve, plus que la relecture. Il est ainsi très courant que des “papiers faux” soient publiés dans les revues scientifiques spécialisées. Les limites du <i>“peer reviewing”</i> sont ainsi une des raisons principales du développement des assistants de preuve tels que Coq, qui peuvent permettre de systématiser la vérification et de limiter le nombre d’erreurs.</p>
+
+                            <p><i>“Il y a très peu de gens qui sont en mesure de faire une relecture experte de certains sujets et puis il y a la réputation de l’auteur qui joue. Enfin ce sont tout un tas de facteurs qui font qu’il y a plein de papiers faux.”</i> <b>Assia Maboubi</b></p>
+
+                            <p><b>Les enjeux de l’accessibilité des assistants de preuve:</b></p>
+
+                            <p>Si le sujet principal de préoccupation réside dans la probabilité d’erreurs dans les publications, le problème est différent pour la vérification formelle par les assistants. Quand Coq vérifie une preuve informatique, le rapport final donné par l’assistant de preuve n’est pas rédigé de manière compréhensible pour un mathématicien. C’est pour cette raison que des travaux sont menés pour rendre Coq plus accessible et intelligible.</p>
+
+                            <p><b>Théo Zimmermann</b>, avec lequel nous nous sommes entretenus, travaille justement sur ces problématiques. Selon lui, l’enjeu est de rendre le rapport final produit et les “scripts de preuve” par Coq vérifiable par un mathématicien sans avoir à utiliser Coq. Il explique ainsi qu’actuellement, le travail sur l'accessibilité des assistants de preuve  n’est pas à un stade assez avancé pour que des personnes non expertes puissent vérifier une preuve.
+                            L’enchaînement de blocs de bases que constitue le script final de Coq devrait pouvoir être traduit en un langage similaire à celui des revues scientifiques. Le problème du langage se pose aussi lorsque des preuves “traditionnelles” sont vérifiées par les assistants de preuve. <b>Assia Mahboubi</b> indique ainsi que les papiers de preuve mathématique contiennent en définitive peu de symboles et que l’implicite tient beaucoup de place. Il y a des conventions et des notations propres à chaque discipline mathématique, et dont le caractère subtil implique une signification différente selon le contexte. Certaines notions restent par ailleurs vagues, car elles constituent des éléments de culture partagée des mathématiques. Dès lors, il devient assez complexe de s’assurer que l’assistant de preuve prenne bien en compte tous ces paramètres. Il est donc assez fastidieux de formaliser une preuve car il faut beaucoup détailler pour que l’assistant puisse accepter la preuve. Herman Geuvers parle ainsi d’un “gap” entre les preuves telles qu’elles sont publiées dans les revues et les preuves compréhensibles pour un ordinateur. </p>
+
+                            <p>L’enjeu de l’accessibilité de l’assistant de preuve n’est pas seulement lié à la compréhension et la vérification. L’accessibilité est intimement liée à la communication et au langage. <b>Théo Zimmermann</b> a ainsi souligné qu’une preuve est avant tout “un objet de communication”, la preuve doit pouvoir être compréhensible et claire pour pouvoir faire consensus. Le critère de conviction est ainsi un des principaux attributs de la preuve selon <b>Tymoczko</b>. <b>Assia Mahboubi</b> souligne ainsi qu’il reste difficile pour “l’oeil humain” de se convaincre d’une preuve dans le langage formel de l’assistant. </p>
+
+                            <p><b>Herman Geuvers</b> opère quant à lui une distinction entre convaincre et expliquer. Il souligne le fait que les preuves mathématiques “traditionnelles” attribuent autant d’importance au détail mathématique en tant que tel qu’à l’explication, puisque la conviction est liée à la compréhension de celui qui parcourt la preuve. Il écrit ainsi que les assistants de preuve <i>“vérifient bien mais expliquent mal”</i>, le problème réside dans la communication. <b>Robert Pollack</b> va dans le même sens en exprimant le fait que la conviction en une preuve relève d’une dimension intimement personnelle, qu’il n’est donc pas possible de complètement formaliser. Pour lui, la conviction en une preuve par informatique soulève deux problèmes principaux : un problème formel qui relève de la justesse des calculs, et un problème informel pour s’assurer que les liens entre propositions sont logiques. <b>Pollack</b> souligne bien l’importance de la confiance et de la compréhension en l’assistant de preuve pour le problème formel. En effet, l’acceptation de la preuve passe pour lui  en premier par la confiance en l’assistant, qui est plus facile à obtenir que la compréhension de la preuve elle-même. </p>
+
+                            <p><b>Callude et Müller</b> détaillent ainsi des <i>“symptômes de compréhension”</i> pour matérialiser la distinction entre les deux notions. Pour ce qui est des preuves formelles, la compréhension implique pour eux la capacité à modifier le programme si celui ci ne fonctionne pas par exemple. La compréhension est ainsi pour eux le principal obstacle aux preuves formelles, car il n’est pas possible de vérifier humainement la preuve. Cela renforce donc l’importance de la clarté et l’accessibilité des assistants de preuve, qui deviennent les seuls accès possibles à la compréhension de la preuve.
+                                C’est pour cette raison que les deux chercheurs plaident pour le développement d’<i>”environnements actifs de preuve”</i> (active proof environment), constitués d’un assistant de preuve (type Coq) et d’une interface intelligente. Cela permet aux utilisateurs de questionner les preuves formelles pour en obtenir une meilleure compréhension. Ils suggèrent pour cette interface, l’automatisation de chaque étape de preuve, la construction d’analogies, d’exemples, le développement de preuves alternatives, des illustrations visuelles. Les suggestions montrent ainsi que la compréhension, par extension la conviction d’une preuve, joue sur de nombreux tableaux, qui concourent tous à rendre l’assistant plus accessible. </p>
+
+                            <p><b>Le paradoxe de l’accessibilité:</b>
+                        Rendre accessible un assistant de preuve tel que Coq confronte les spécialistes à un certain paradoxe. En voulant développer l’assistant de preuve afin que le script final et que son utilisation soit plus lisible et intelligible, le risque de bugs peut potentiellement être augmenté. En effet, développer le noyau de l’assistant induit forcément une probabilité d’erreurs plus grande. Pour altérer le fonctionnement du programme, il faudrait que le bug potentiel soit exploité de telle sorte à rendre le résultat final invalide. Cela correspondrait par exemple  à valider quelque chose ne correspondant pas à la preuve de départ. <b>Assia Mahboubi</b> relativise cependant le risque, en expliquant que la probabilité d’une telle occurrence est infinitésimale. </p>
+
+                        </div>
+
+                        <p style='text-align: center;'><a data-scroll class='arrow' href='#arguments-tymoczko'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
+
+                </div>
+
+            </div>
+
+            <div id='arguments-tymoczko' class='container'>
+
+                <div class='centered-container'>
+
+                    <h1>L'élargissement de la controverse</h1>
+
+                    <div class='text-container'>
+                        <p>Wallah c'est chaud</p>
+                    </div>
+
+                    <p style='text-align: center;'><a data-scroll href='#a-priori-a-posteriori'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a><p>
+
+                </div>
+
+            </div>
+
+            <div id='a-priori-a-posteriori' class='container'>
+
+                <div class='centered-container'>
+
+                    <h1><i>A priori</i> et <i>a posteriori</i></h1>
+
+                    <p>Caca</p>
+
+                    <p style='text-align: center;'><a data-scroll href='#reponses'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a></p>
+
+                </div>
+
+            </div>
+
+            <div id='reponses' class='container'>
+
+                <div class='centered-container'>
+
+                    <h1>Les réponses des philosophes <br /> à Tymoczko</h1>
+
+                    <div class='text-container'>
+                        <p>Marine Le Pen</p>
+                    </div>
+
+                    <p style='text-align: center;'><a data-scroll href='#controverse-pour-qui'><img src='pictures/arrow-black.svg' style='width: 10vh;' /></a></p>
+
+                </div>
+
+            </div>
+
+            <div id='controverse-pour-qui' class='container'>
+
+                <div class='centered-container'>
+
+                    <h1>Une controverse pour qui ?</h1>
+
+                    <div class='text-container'>
+                        <p>Wallah</p>
+                    </div>
+
+                    <p style='text-align: center;'><a data-scroll href='#'><img src='pictures/left-arrow.svg' style='height: 10vh;' /></a></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+		<script src='main.js'></script>
+        <script type='text/javascript' src='libraries/animsition.js'></script>
+        <script>
+            $(document).ready(function() {
+              $('.animsition').animsition({
+                inClass: 'fade-in-up-lg',
+                outClass: 'fade-out-down-lg',
+                inDuration: 800,
+                outDuration: 800
+              });
+            });
+        </script>
+    </body>
+</html>

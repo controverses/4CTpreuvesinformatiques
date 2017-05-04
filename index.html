@@ -8,285 +8,279 @@
         <link rel='stylesheet' href='styles/main.css'>
 		<link rel='stylesheet' href='styles/timeline.css'>
         <link rel='stylesheet' href='styles/tooltip.css'>
+        <link rel='stylesheet' href='styles/animsition.css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans' rel='stylesheet' type='text/css'>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
         <script src='https://controverses.github.io/4CTpreuvesinformatiques/libraries/modernizr.custom.js'></script>
         <script src='https://controverses.github.io/4CTpreuvesinformatiques/libraries/tooltip.js'></script>
         <script src='https://controverses.github.io/4CTpreuvesinformatiques/libraries/smooth-scroll.js'></script>
         <script>
-            smoothScroll.init({speed: 1500, offset: 50});
+            smoothScroll.init({selector:'[data-scroll-0]', speed: 1500, offset: 0});
         </script>
-
+        <script>
+            smoothScroll.init({selector:'[data-scroll]', speed: 1500, offset: 50});
+        </script>
     </head>
     <body>
 
-		<header>
-            <div id='intro'>
-                <h1 style='text-align: center;'>Le théorème des quatre couleurs et les preuves informatiques (titre nul à changer)</h1>
-                <p>Le théorème des quatre couleurs est un problème mathématique qui n’a presque aucune application pratique. Son énoncé affirme que quatres couleurs différentes suffisent pour colorier n'importe quelle carte découpée en <span class="tooltip" onmouseover="tooltip.pop(this, '<p>Une région est dite connexe si elle est &quoten un seul morceau&quot. Par exemple, la France nʼest pas une région connexe, mais la France continentale si.</p>')" style='color: #E53935;'>régions connexes</span>, de sorte que deux régions limitrophes, c'est-à-dire ayant toute une frontière en commun et non simplement un point, reçoivent toujours deux couleurs distinctes.</p>
-                <p>Pourtant la “preuve” de ce théorème réalisée par Kenneth Appel et Wolfgang Haken en 1976 a partagé la communauté scientifique car elle se base sur une très grande disjonction de cas traités par informatique. C’est en effet la première “preuve” mathématique à avoir été réalisée à l’aide d’un ordinateur en raison de l’ampleur des calculs à réaliser. Elle s’oppose en cela aux preuves dites “conventionnelles” dont la production et la relecture ne nécessite que du papier et un crayon.</p>
-                <p>Un consensus semble avoir été trouvé en 2004, lorsque l’équipe de Georges Gonthier et Benjamin Werner a vérifié informatiquement la justesse d’une preuve du théorème énoncée en 1995. Cependant l’opposition entre preuve “conventionnelle” et preuve “automatisée” persiste si bien que des mathématiciens cherche toujours une preuve “conventionnelle” au théorème. En cela le théorème des quatre couleurs pose la question suivante :</p>
-                <p style='text-align: center; font-weight: bold; font-size: 2.5vmin'>Dans quelle mesure le développement des preuves informatiques ouvre t-il une réflexion sur la nature de la preuve en mathématiques ?</p>
-                <p>L’histoire de ce théorème questionne la place l’informatique dans les mathématiques et plus particulièrement le fait d’utiliser un ordinateur pour prouver une conjecture par la force de calcul brute. Cependant le décalage entre le peu d’application pratique du théorème et l’acharnement démontré par les mathématiciens pour en trouver une preuve “conventionnelle” pose aussi la question de ce qui est cherché par les scientifiques au delà de la véracité de la conjecture.</p>
-                <!--<a data-scroll id='arrow' href='#main'><p style='text-align: center;'><img src='pictures/arrow-black.svg' style='width: 5vh;'</p><a>-->
-            </div>
-		</header>
+        <div class='animsition'>
+
+    		<header>
+                <div id='intro'>
+                    <h1 style='text-align: center;'>Le théorème des quatre couleurs et les preuves informatiques (titre nul à changer)</h1>
+                    <p>Le théorème des quatre couleurs est un problème mathématique qui n’a presque aucune application pratique. Son énoncé affirme que quatres couleurs différentes suffisent pour colorier n'importe quelle carte découpée en <span class="tooltip" onmouseover="tooltip.pop(this, '<p>Une région est dite connexe si elle est &quoten un seul morceau&quot. Par exemple, la France nʼest pas une région connexe, mais la France continentale si.</p>')" style='color: #E53935;'>régions connexes</span>, de sorte que deux régions limitrophes, c'est-à-dire ayant toute une frontière en commun et non simplement un point, reçoivent toujours deux couleurs distinctes.</p>
+                    <p>Pourtant la “preuve” de ce théorème réalisée par Kenneth Appel et Wolfgang Haken en 1976 a partagé la communauté scientifique car elle se base sur une très grande disjonction de cas traités par informatique. C’est en effet la première “preuve” mathématique à avoir été réalisée à l’aide d’un ordinateur en raison de l’ampleur des calculs à réaliser. Elle s’oppose en cela aux preuves dites “conventionnelles” dont la production et la relecture ne nécessite que du papier et un crayon.</p>
+                    <p>Un consensus semble avoir été trouvé en 2004, lorsque l’équipe de Georges Gonthier et Benjamin Werner a vérifié informatiquement la justesse d’une preuve du théorème énoncée en 1995. Cependant l’opposition entre preuve “conventionnelle” et preuve “automatisée” persiste si bien que des mathématiciens cherche toujours une preuve “conventionnelle” au théorème. En cela le théorème des quatre couleurs pose la question suivante :</p>
+                    <p style='text-align: center; font-weight: bold; font-size: 2.5vmin'>Dans quelle mesure le développement des preuves informatiques ouvre t-il une réflexion sur la nature de la preuve en mathématiques ?</p>
+                    <p>L’histoire de ce théorème questionne la place l’informatique dans les mathématiques et plus particulièrement le fait d’utiliser un ordinateur pour prouver une conjecture par la force de calcul brute. Cependant le décalage entre le peu d’application pratique du théorème et l’acharnement démontré par les mathématiciens pour en trouver une preuve “conventionnelle” pose aussi la question de ce qui est cherché par les scientifiques au delà de la véracité de la conjecture.</p>
+                    <!--<a data-scroll id='arrow' href='#main'><p style='text-align: center;'><img src='pictures/arrow-black.svg' style='width: 5vh;'</p><a>-->
+                </div>
+    		</header>
 
             <div id='main'>
 
-                <sidebar id='sidebar'>
-                    <h3 align='center'>Chronologie</h3>
-                    <div id='menu'>
-                        <a data-scroll href='#1852'><p>1852 : Découverte de la conjecture</p></a>
-                        <a data-scroll href='#1879'><p>1879 : Tentative de preuve par Kempe</p></a>
-                        <a data-scroll href='#1890'><p>1890 : Contre-exemple de Heawood</p></a>
-                        <a data-scroll href='#1913'><p>1913 : Démonstration pour une carte réduite</p></a>
-                        <a data-scroll href='#1935'><p>1935 : Travaux de Heesch</p></a>
-                        <a data-scroll href='#1965'><p>1965 : Première utilisation de l'informatique</p></a>
-                        <a data-scroll href='#1971'><p>1971 : Première tentative de preuve informatique</p></a>
-                        <a data-scroll href='#1975'><p>1975 : Un problème qui intrigue de plus en plus</p></a>
-                        <a data-scroll href='#1976'><p>1976 : Première preuve informatique</p></a>
-                        <a data-scroll href='#1977'><p>1977 : Un débat qui se poursuit</p></a>
-                        <a data-scroll href='#1993'><p>1993 : Réduction du nombre de configurations</p></a>
-                        <a data-scroll href='#1995'><p>1995 : Un premier consensus</p></a>
-                        <a data-scroll href='#2004'><p>2004 : La fin de la controverse ?</p></a>
+                    <sidebar id='sidebar'>
+                        <h3 align='center'>Chronologie</h3>
+                        <div id='menu'>
+                            <a data-scroll href='#1852'><p>1852 : Découverte de la conjecture</p></a>
+                            <a data-scroll href='#1879'><p>1879 : Tentative de preuve par Kempe</p></a>
+                            <a data-scroll href='#1890'><p>1890 : Contre-exemple de Heawood</p></a>
+                            <a data-scroll href='#1913'><p>1913 : Démonstration pour une carte réduite</p></a>
+                            <a data-scroll href='#1935'><p>1935 : Travaux de Heesch</p></a>
+                            <a data-scroll href='#1965'><p>1965 : Première utilisation de l'informatique</p></a>
+                            <a data-scroll href='#1971'><p>1971 : Première tentative de preuve informatique</p></a>
+                            <a data-scroll href='#1975'><p>1975 : Un problème qui intrigue de plus en plus</p></a>
+                            <a data-scroll href='#1976'><p>1976 : Première preuve informatique</p></a>
+                            <a data-scroll href='#1977'><p>1977 : Un débat qui se poursuit</p></a>
+                            <a data-scroll href='#1993'><p>1993 : Réduction du nombre de configurations</p></a>
+                            <a data-scroll href='#1995'><p>1995 : Un premier consensus</p></a>
+                            <a data-scroll href='#2004'><p>2004 : La fin de la controverse ?</p></a>
+                        </div>
+                    </sidebar>
+
+                    <div id='main-page'>
+                        <div id='timeline' class='cd-container'>
+
+                			<div class='timeline-block' id='1852'>
+
+                				<div class='timeline-img' style='background-color: #E53935'>
+                					<img src='pictures/magnifier.svg'>
+                				</div> <!-- timeline-img -->
+
+                				<div class='timeline-content'>
+                					<h2>Découverte de la conjecture</h2>
+                					<p>A l’Université de Cambridge, un étudiant en cartographie et mathématiques, Francis Guthrie, colorie une carte des cantons du Royaume-Uni et remarque que quatre couleurs suffisent.</p>
+                					<p>Il en parle alors à son professeur Auguste De Morgan, qui comprit rapidement que le problème était plus compliqué qu’il n’y semblait. Son successeur, Arthur Cayley (du théorème de Cayley-Hamilton), publie le problème en 1878.</p>
+                					<span class='date'>1852</span>
+                				</div> <!-- timeline-content -->
+
+                			</div> <!-- timeline-block -->
+
+                			<div class='timeline-block' id='1879'>
+
+                				<div class='timeline-img' style='background-color: #FFB300'>
+                					<img src='pictures/pentagon.svg'>
+                				</div> <!-- timeline-img -->
+
+                				<div class='timeline-content'>
+                					<h2>Tentative de preuve par Kempe</h2>
+                					<p>Alfred Kempe résout le problème en ramenant tout à une carte composée de pentagones, s’inspirant du théorème d’Euler. En retirant les pièces dans l’ordre inverse de leur composition, la carte originelle peut être reconstruite étape par étape, en préservant la condition des quatre couleurs.</p>
+                                    <p>Kempe cherche à montrer que si chaque étape du développement préserve la condition, alors la condition serait conservée à l’étape suivante (quand la prochaine pièce serait retirée). Si la carte réduite respecte la condition, alors la carte arbitraire de départ respecte la condition, et alors la conjecture est vraie. La méthode qu’il développe ici s’appelle la méthode dite des “chaînes de Kempe”.</p>
+                					<span class='date'>1879</span>
+                				</div> <!-- timeline-content -->
+
+                			</div> <!-- timeline-block -->
+
+                			<div class='timeline-block' id='1890'>
+
+                				<div class='timeline-img' style='background-color: #1E88E5'>
+                					<img src='pictures/close.svg'>
+                				</div> <!-- timeline-img -->
+
+                				<div class='timeline-content'>
+                					<h2>Contre-exemple de Heawood</h2>
+                					<p>Percy John Heawood donne un contre-exemple à la démonstration de Kempe. Il apparaît que les calculs de Kempe étaient faux, mais d’une manière que personne n’arrivait à corriger. Kempe avait trouvé un “nombre inévitable de configurations” mais un de ses membres n’était pas réductible.</p>
+                                    <p>Ce contre-exemple fait plus que simplement contredire Kempe, il met en évidence le fait que la recherche d’un set réductible s’avère en réalité beaucoup plus complexe que ce que Kempe avait amorcé, l’ordre de grandeur avoisinant en effet les 10 000 membres de sets réductibles.</p>
+                					<span class='date'>1890</span>
+                				</div> <!-- timeline-content -->
+
+                			</div> <!-- timeline-block -->
+
+                            <div class='timeline-block' id='1913'>
+
+                                <div class='timeline-img' style='background-color: #2E7D32'>
+                                    <img src='pictures/map.svg'>
+                                </div> <!-- timeline-img -->
+
+                                <div class='timeline-content'>
+                                    <h2>Démonstration pour une carte réduite</h2>
+                                    <p>Le père de l'algèbre moderne, George D. Birkhoff, formule la notion de configuration réductible et démontre la conjecture pour toutes les cartes comportant moins de 26 régions à colorier. Cette borne est améliorée au cours du XX<sup>ème</sup> siècle.</p>
+                                    <span class='date'>1913</span>
+                                </div> <!-- timeline-content -->
+
+                            </div> <!-- timeline-block -->
+
+
+
+
+                            <div class='timeline-block' id='1935'>
+
+                				<div class='timeline-img' style='background-color: #FFB300'>
+                                    <img src='pictures/tiling.svg'>
+                				</div> <!-- timeline-img -->
+
+                				<div class='timeline-content'>
+                					<h2>Travaux de Heesch</h2>
+                					<p>Heinrich Heesch résout le problème du “carrelage régulier” : il donne une liste de toutes les formes d’une pièce régulière qui peut être utilisée pour carreler le plan et prouve que cette liste est exhaustive. Il  développe le principe dit de la <span class="tooltip" onmouseover="tooltip.pop(this, '<p>La C-réduction est un algorithme ramenant le problème de coloriage dʼune carte à n pays à un problème de coloriage dʼune carte à n-1 pays et de revenir au problème à n pays par récurrence. (voir la vidéo de Georges Gonthier à 09:35).')" style='color: #E53935;'>C-réductibilité</span>, qui consiste à remplacer une configuration donnée par un sous graphe lui correspondant.</p>
+
+
+                					<span class='date'>1935</span>
+                				</div> <!-- timeline-content -->
+
+                			</div> <!-- timeline-block -->
+
+                            <div class='timeline-block' id='1965'>
+
+                				<div class='timeline-img' style='background-color: #E53935'>
+                                    <img src='pictures/old-computer.svg'>
+                				</div> <!-- timeline-img -->
+
+                				<div class='timeline-content'>
+                					<h2>Première utilisation de l'informatique</h2>
+                					<p>Dans la continuité de Heinrich Heesch, Karl Dürre écrit un programme pour déterminer la <span class="tooltip" onmouseover="tooltip.pop(this, '<p>La D-réduction est un algorithme ramenant le problème de coloriage d’une carte à un problème de coloriage par récurrence d’un anneau de 4-couleurs autour d’une configuration donnée.</p>')" style='color: #1E88E5;'>D-réductibilité</span> dans le langage de programmation ALGOL 60. Le programme lui permet aussi  de vérifier des configurations de Kempe plus complexes.</p>
+                					<span class='date'>1965</span>
+                				</div> <!-- timeline-content -->
+
+                			</div> <!-- timeline-block -->
+
+                            <div class='timeline-block' id='1971'>
+
+                                <div class='timeline-img' style='background-color: #1E88E5'>
+                                    <img src='pictures/horseshoe.svg'>
+                                </div> <!-- timeline-img -->
+
+                                <div class='timeline-content'>
+                                    <h2>Première tentative de preuve informatique</h2>
+                                    <p>En expérimentant avec des sets de configurations, Yoshio Shimamoto découvre la configuration du “fer à cheval”, montrant que la D-réductibilité est incompatible avec l’existence d’une carte de cinq couleurs, et donc prouverait la conjecture du théorème des quatre couleurs. Cependant, le programme de Dürre montra que cette configuration n’était pas D-réductible. La démonstration de Shimamoto échoue finalement.</p>
+                                    <span class='date'>1971</span>
+                                </div> <!-- timeline-content -->
+
+                            </div> <!-- timeline-block -->
+
+                            <div class='timeline-block' id='1975'>
+
+                                <div class='timeline-img' style='background-color: #2E7D32'>
+                                    <img src='pictures/fish.svg'>
+                                </div> <!-- timeline-img -->
+
+                                <div class='timeline-content'>
+                                    <h2>Un problème qui intrigue de plus en plus</h2>
+                                    <p>Martin Gardner publie dans <i>Scientific American</i> une carte qu’il présente comme contre-exemple de la conjecture du théorème des quatre couleurs. Même si cet exemple est en réalité un “poisson d’avril”, cela montre l’intérêt que suscite la conjecture dans la communauté des mathématiciens.</p>
+                                    <span class='date'>1975</span>
+                                </div> <!-- timeline-content -->
+
+                            </div> <!-- timeline-block -->
+
+                            <div class='timeline-block' id='1976'>
+
+                				<div class='timeline-img' style='background-color: #FFB300'>
+                					<img src='pictures/binary-thinking.svg'>
+                				</div> <!-- timeline-img -->
+
+                				<div class='timeline-content'>
+                					<h2>La naissance de la controverse</h2>
+                					<p>
+                                        <a href='acteurs.html#haken' target='_blank'>
+                                            <span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#haken')" style='color: #E53935'>Haken,</span>
+                                        </a>
+                                        <a href='acteurs.html#appel' target='_blank'>
+                                            <span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#appel')" style='color: #E53935'>Appel</span>
+                                        </a>
+                                    et Koch présentent leur preuve : ils  étudient sur papier 10&nbsp;000 cartes, en extraient 1500 configurations et testent 1&nbsp;000&nbsp;000&nbsp;000 de coloriages avec un programme IBM, afin d'en prouver la C-réductibilité. Cette preuve met en oeuvre une interaction humain/machine : la construction de sets est inévitablement réalisée à la main, de même que la vérification de la bonne implémentation des configurations.</p>
+                					<p>Une étude de 140 pages est publiée, décrivant la stratégie de la démonstration. La deuxième partie liste le set de configurations inévitables et décrit le programme vérifiant que chaque set est réductible.</p>
+                                    <p style='color:#7f8c97; text-align: center; font-size: 1.5em;'><a class='animsition-link' href='controverse-1976.html'><b>En savoir plus sur la controverse</b></a></p>
+                					<span class='date'>1976</span>
+                				</div> <!-- timeline-content -->
+
+                			</div> <!-- timeline-block -->
+
+                            <div class='timeline-block' id='1977'>
+
+                				<div class='timeline-img' style='background-color: #E53935'>
+                                    	<img src='pictures/check.svg'>
+                                </div> <!-- timeline-img -->
+
+                				<div class='timeline-content'>
+                					<h2>Un débat qui se poursuit</h2>
+                					<p>Frank Allaire apporte une nouvelle preuve de la conjecture avec un set différent de configurations inévitables et des preuves plus convaincantes de réductibilité. Son travail s’inscrit dans la lignée de la démonstration de 1976 et vise à répondre aux critiques suscitées.</p>
+                					<span class='date'>1977</span>
+                				</div> <!-- timeline-content -->
+
+                			</div> <!-- timeline-block -->
+
+                            <div class='timeline-block' id='1993'>
+
+                                <div class='timeline-img' style='background-color: #1E88E5'>
+                                    <img src='pictures/minus.svg'>
+                                </div> <!-- timeline-img -->
+
+                                <div class='timeline-content'>
+                                    <h2>Réduction du nombre de configurations</h2>
+                                    <p>Neil Robertson et Daniel Sanders réalisent informatiquement la procédure de “décharge” que Appel et Haken avaient effectué manuellement. Il s’agit donc de rechercher des configurations de sets inévitables. Ils réduisent le nombre de configurations à 633. Ils font cependant face à une réaction toujours hostile devant l’usage de l’ordinateur.</p>
+                                    <span class='date'>1993</span>
+                                </div> <!-- timeline-content -->
+
+                            </div> <!-- timeline-block -->
+
+                            <div class='timeline-block' id='1995'>
+
+                                <div class='timeline-img' style='background-color: #2E7D32'>
+                                    <img src='pictures/convergence.svg'>
+                                </div> <!-- timeline-img -->
+
+                                <div class='timeline-content'>
+                                    <h2>Un premier consensus</h2>
+                                    <p>Robertson, Saunders, Seymour et Thomas présentent une amélioration de la preuve de Appel, Haken et Koch : ils optimisent l’analyse et remarquent que l’étude des 633 configurations mises en évidence en 1993 suffit. De plus l’étude des 10 000 cartes et des 1 000 000 000 de coloriages peut se faire avec des programmes en langage C. Ceux-ci sont beaucoup plus compréhensibles et rapides : en trois heures la tâche est effectuée alors qu’il avait fallu deux mois et demi à Appel et Haken pour aboutir au même résultat.</p>
+                                    <p>Ils publient finalement un article de 35 pages compréhensible et lisible qui établit une forme de consensus au sein de la communauté scientifique.</p>
+                                    <span class='date'>1995</span>
+                                </div> <!-- timeline-content -->
+
+                            </div> <!-- timeline-block -->
+
+                			<div class='timeline-block' id='2004'>
+
+                				<div class='timeline-img' style='background-color: #FFB300'>
+                						<img src='pictures/computer.svg'>
+                				</div> <!-- timeline-img -->
+
+                				<div class='timeline-content'>
+                					<h2>La fin de la controverse ?</h2>
+                					<p>Georges Gonthier et Benjamin Werner convertissent la preuve précédente sur le logiciel Coq, en remplaçant les programmes C par un script de preuve. Cela leur permet de démontrer la validité de la preuve de 1995 : la controverse semble fermée.</p>
+                                    <p style='color:#7f8c97; text-align: center; font-size: 1.5em;'><a class='animsition-link' data-animsition-out-class="fade-out-up" data-animsition-out-duration="800" href='fin-controverse.html'><b>Est-ce vraiment le cas ?</b></a></p>
+                					<span class='date'>2004</span>
+                				</div> <!-- timeline-content -->
+
+                			</div> <!-- timeline-block -->
+
+                        </div> <!-- timeline -->
+
                     </div>
-                </sidebar>
-
-                <div id='main-page'>
-                    <div id='timeline' class='cd-container'>
-
-            			<div class='timeline-block' id='1852'>
-
-            				<div class='timeline-img' style='background-color: #E53935'>
-            					<img src='pictures/magnifier.svg'>
-            				</div> <!-- timeline-img -->
-
-            				<div class='timeline-content'>
-            					<h2>Découverte de la conjecture</h2>
-            					<p>A l’Université de Cambridge, un étudiant en cartographie et mathématiques, Francis Guthrie, colorie une carte des cantons du Royaume-Uni et remarque que quatre couleurs suffisent.</p>
-            					<p>Il en parle alors à son professeur Auguste De Morgan, qui comprit rapidement que le problème était plus compliqué qu’il n’y semblait. Son successeur, Arthur Cayley (du théorème de Cayley-Hamilton), publie le problème en 1878.</p>
-            					<span class='date'>1852</span>
-            				</div> <!-- timeline-content -->
-
-            			</div> <!-- timeline-block -->
-
-            			<div class='timeline-block' id='1879'>
-
-            				<div class='timeline-img' style='background-color: #FFB300'>
-            					<img src='pictures/pentagon.svg'>
-            				</div> <!-- timeline-img -->
-
-            				<div class='timeline-content'>
-            					<h2>Tentative de preuve par Kempe</h2>
-            					<p>Alfred Kempe résout le problème en ramenant tout à une carte composée de pentagones, s’inspirant du théorème d’Euler. En retirant les pièces dans l’ordre inverse de leur composition, la carte originelle peut être reconstruite étape par étape, en préservant la condition des quatre couleurs.</p>
-                                <p>Kempe cherche à montrer que si chaque étape du développement préserve la condition, alors la condition serait conservée à l’étape suivante (quand la prochaine pièce serait retirée). Si la carte réduite respecte la condition, alors la carte arbitraire de départ respecte la condition, et alors la conjecture est vraie. La méthode qu’il développe ici s’appelle la méthode dite des “chaînes de Kempe”.</p>
-            					<span class='date'>1879</span>
-            				</div> <!-- timeline-content -->
-
-            			</div> <!-- timeline-block -->
-
-            			<div class='timeline-block' id='1890'>
-
-            				<div class='timeline-img' style='background-color: #1E88E5'>
-            					<img src='pictures/close.svg'>
-            				</div> <!-- timeline-img -->
-
-            				<div class='timeline-content'>
-            					<h2>Contre-exemple de Heawood</h2>
-            					<p>Percy John Heawood donne un contre-exemple à la démonstration de Kempe. Il apparaît que les calculs de Kempe étaient faux, mais d’une manière que personne n’arrivait à corriger. Kempe avait trouvé un “nombre inévitable de configurations” mais un de ses membres n’était pas réductible.</p>
-                                <p>Ce contre-exemple fait plus que simplement contredire Kempe, il met en évidence le fait que la recherche d’un set réductible s’avère en réalité beaucoup plus complexe que ce que Kempe avait amorcé, l’ordre de grandeur avoisinant en effet les 10 000 membres de sets réductibles.</p>
-            					<span class='date'>1890</span>
-            				</div> <!-- timeline-content -->
-
-            			</div> <!-- timeline-block -->
-
-                        <div class='timeline-block' id='1913'>
-
-                            <div class='timeline-img' style='background-color: #2E7D32'>
-                                <img src='pictures/map.svg'>
-                            </div> <!-- timeline-img -->
-
-                            <div class='timeline-content'>
-                                <h2>Démonstration pour une carte réduite</h2>
-                                <p>Le père de l'algèbre moderne, G. D. Birkhoff, formule la notion de configuration réductible et démontre la conjecture pour toutes les cartes comportant moins de 26 régions à colorier. Cette borne est améliorée au cours du XX<sup>ème</sup> siècle.</p>
-                                <span class='date'>1913</span>
-                            </div> <!-- timeline-content -->
-
-                        </div> <!-- timeline-block -->
-
-
-
-
-                        <div class='timeline-block' id='1935'>
-
-            				<div class='timeline-img' style='background-color: #FFB300'>
-                                <img src='pictures/tiling.svg'>
-            				</div> <!-- timeline-img -->
-
-            				<div class='timeline-content'>
-            					<h2>Travaux de Heesch</h2>
-            					<p>Heinrich Heesch résout le problème du “carrelage régulier” : il donne une liste de toutes les formes d’une pièce régulière qui peut être utilisée pour carreler le plan et prouve que cette liste est exhaustive. Il  développe le principe dit de la C-réductibilité, qui consiste à remplacer une configuration donnée par un sous graphe lui correspondant.</p>
-            					<span class='date'>1935</span>
-            				</div> <!-- timeline-content -->
-
-            			</div> <!-- timeline-block -->
-
-                        <div class='timeline-block' id='1965'>
-
-            				<div class='timeline-img' style='background-color: #E53935'>
-                                <img src='pictures/old-computer.svg'>
-            				</div> <!-- timeline-img -->
-
-            				<div class='timeline-content'>
-            					<h2>Première utilisation de l'informatique</h2>
-            					<p>Dans la continuité de Heinrich Heesch, Karl Dürre écrit un programme pour déterminer la D-réductibilité dans le langage de programmation ALGOL 60. Le programme lui permet aussi  de vérifier des configurations de Kempe plus complexes.</p>
-            					<span class='date'>1965</span>
-            				</div> <!-- timeline-content -->
-
-            			</div> <!-- timeline-block -->
-
-                        <div class='timeline-block' id='1971'>
-
-                            <div class='timeline-img' style='background-color: #1E88E5'>
-                                <img src='pictures/horseshoe.svg'>
-                            </div> <!-- timeline-img -->
-
-                            <div class='timeline-content'>
-                                <h2>Première tentative de preuve informatique</h2>
-                                <p>En expérimentant avec des sets de configurations, Yoshio Shimamoto découvre la configuration du “fer à cheval”, montrant que la D-réductibilité est incompatible avec l’existence d’une carte de cinq couleurs, et donc prouverait la conjecture du théorème des quatre couleurs. Cependant, le programme de Dürre montra que cette configuration n’était pas D-réductible. La démonstration de Shimamoto échoue finalement.</p>
-                                <span class='date'>1971</span>
-                            </div> <!-- timeline-content -->
-
-                        </div> <!-- timeline-block -->
-
-                        <div class='timeline-block' id='1975'>
-
-                            <div class='timeline-img' style='background-color: #2E7D32'>
-                                <img src='pictures/fish.svg'>
-                            </div> <!-- timeline-img -->
-
-                            <div class='timeline-content'>
-                                <h2>Un problème qui intrigue de plus en plus</h2>
-                                <p>Martin Gardner publie dans <i>Scientific American</i> une carte qu’il présente comme contre-exemple de la conjecture du théorème des quatre couleurs. Même si cet exemple est en réalité un “poisson d’avril”, cela montre l’intérêt que suscite la conjecture dans la communauté des mathématiciens.</p>
-                                <span class='date'>1975</span>
-                            </div> <!-- timeline-content -->
-
-                        </div> <!-- timeline-block -->
-
-                        <div class='timeline-block' id='1976'>
-
-            				<div class='timeline-img' style='background-color: #FFB300'>
-            					<img src='pictures/binary-thinking.svg'>
-            				</div> <!-- timeline-img -->
-
-            				<div class='timeline-content'>
-            					<h2>La naissance de la controverse</h2>
-            					<p>Haken,
-                                    <a href='acteurs.html#appel' target='_blank'>
-                                        <span class='tooltip' onmouseover="tooltip.ajax(this, 'acteurs.html#appel')" style='color: #E53935'>Appel</span>
-                                    </a>
-                                et Koch présentent leur preuve : ils  étudient sur papier 10 000 cartes, en extraient 1500 configurations et testent 1 000 000 000 de coloriages avec un programme IBM, afin d'en prouver la C-réductibilité. Cette preuve met en oeuvre une interaction humain/machine : la construction de sets est inévitablement réalisée à la main, de même que la vérification de la bonne implémentation des configurations.</p>
-            					<p>Une étude de 140 pages est publiée, décrivant la stratégie de la démonstration. La deuxième partie liste le set de configurations inévitables et décrit le programme vérifiant que chaque set est réductible.</p>
-                                <p style='color:#7f8c97; text-align: center; font-size: 1.5em;'><a href='https://controverses.github.io/4CTpreuvesinformatiques/controverse-1976.html'><b>En savoir plus sur la controverse</b></a></p>
-            					<span class='date'>1976</span>
-            				</div> <!-- timeline-content -->
-
-            			</div> <!-- timeline-block -->
-
-                        <div class='timeline-block' id='1977'>
-
-            				<div class='timeline-img' style='background-color: #E53935'>
-                                	<img src='pictures/check.svg'>
-                            </div> <!-- timeline-img -->
-
-            				<div class='timeline-content'>
-            					<h2>Un débat qui se poursuit</h2>
-            					<p>Frank Allaire apporte une nouvelle preuve de la conjecture avec un set différent de configurations inévitables et des preuves plus convaincantes de réductibilité. Son travail s’inscrit dans la lignée de la démonstration de 1976 et vise à répondre aux critiques suscitées.</p>
-            					<span class='date'>1977</span>
-            				</div> <!-- timeline-content -->
-
-            			</div> <!-- timeline-block -->
-
-                        <div class='timeline-block' id='1993'>
-
-                            <div class='timeline-img' style='background-color: #1E88E5'>
-                                <img src='pictures/minus.svg'>
-                            </div> <!-- timeline-img -->
-
-                            <div class='timeline-content'>
-                                <h2>Réduction du nombre de configurations</h2>
-                                <p>Neil Robertson et Daniel Sanders réalisent informatiquement la procédure de “décharge” que Appel et Haken avaient effectué manuellement. Il s’agit donc de rechercher des configurations de sets inévitables. Ils réduisent le nombre de configurations à 633. Ils font cependant face à une réaction toujours hostile devant l’usage de l’ordinateur.</p>
-                                <span class='date'>1993</span>
-                            </div> <!-- timeline-content -->
-
-                        </div> <!-- timeline-block -->
-
-                        <div class='timeline-block' id='1995'>
-
-                            <div class='timeline-img' style='background-color: #2E7D32'>
-                                <img src='pictures/convergence.svg'>
-                            </div> <!-- timeline-img -->
-
-                            <div class='timeline-content'>
-                                <h2>Un premier consensus</h2>
-                                <p>Robertson, Saunders, Seymour et Thomas présentent une amélioration de la preuve de Appel, Haken et Koch : ils optimisent l’analyse et remarquent que l’étude des 633 configurations mises en évidence en 1993 suffit. De plus l’étude des 10 000 cartes et des 1 000 000 000 de coloriages peut se faire avec des programmes en langage C. Ceux-ci sont beaucoup plus compréhensibles et rapides : en trois heures la tâche est effectuée alors qu’il avait fallu deux mois et demi à Appel et Haken pour aboutir au même résultat.</p>
-                                <p>Ils publient finalement un article de 35 pages compréhensible et lisible qui établit une forme de consensus au sein de la communauté scientifique.</p>
-                                <span class='date'>1995</span>
-                            </div> <!-- timeline-content -->
-
-                        </div> <!-- timeline-block -->
-
-            			<div class='timeline-block' id='2004'>
-
-            				<div class='timeline-img' style='background-color: #FFB300'>
-            						<img src='pictures/computer.svg'>
-            				</div> <!-- timeline-img -->
-
-            				<div class='timeline-content'>
-            					<h2>La fin de la controverse ?</h2>
-            					<p>Georges Gonthier et Benjamin Werner convertissent la preuve précédente sur le logiciel Coq, en remplaçant les programmes C par un script de preuve. Cela leur permet de démontrer la validité de la preuve de 1995 : la controverse semble fermée.</p>
-            					<span class='date'>2004</span>
-            				</div> <!-- timeline-content -->
-
-            			</div> <!-- timeline-block -->
-
-                    </div> <!-- timeline -->
-
-                </div>
 
             </div>
 
-        <!--<div class='container'>
-            <p><strong>Quels sont les enjeux de la recherche sur l’accessibilité des assistants de preuve?</strong></p>
-
-            <p>Le domaine assistants de preuve voit le développement d’une nouvelle branche de recherche. De plus en plus de scientifiques travaillent sur les moyens dont les assistants de preuve tels que Coq peuvent être rendus plus accessibles. En effet, si <strong>Gonthier</strong> a permis de créer un consensus sur la preuve de 1995 du théorème des quatre couleurs, il a aussi ouvert le champ d’application de Coq. La vérification de la preuve de 1995 par Coq n’est qu’une étape du développement potentiel des applications possibles des assistants de preuve. Cependant, l’obstacle principal à ce développement est le problème de l’accessibilité du langage et du fonctionnement des assistants de preuve.  La plupart des mathématiciens ne sont pour l’instant pas en mesure d’utiliser des assistants tels que Coq pour la vérification de preuve. </p>
-
-            <p><strong>L’enjeu du développement des assistants de preuve face aux limites du peer review:</strong> </p>
-
-            <p>Le développement des preuves formelles est en partie lié aux limites du peer review traditionnel. Ce système est basé sur le contrôle de la communauté scientifique, qui vérifie les preuves soumises par des confrères. Cependant, cela ne garantit pas la correction systématique des erreurs. En effet, <strong>Assia Mahboubi</strong> nous a ainsi rappelé en entretien que dans les domaines de maths “pures”, sans calculs spécifiques à vérifier, le niveau de technicité était tel qu’une minorité de mathématiciens seulement était susceptible de pouvoire vérifier une preuve. Peu de personnes sont en réalité en mesure de faire la relecture des preuves publiées. D’après <strong>Assia Mahboubi</strong>, la réputation de l’auteur est un facteur important de la validation de la preuve, plus que la relecture. Il est ainsi très courant que des “papiers faux” soient publiés dans les revues scientifiques spécialisées. Les limites du <em>“peer reviewing”</em> sont ainsi une des raisons principales du développement des assistants de preuve tels que Coq, qui peuvent permettre de systématiser la vérification et de limiter le nombre d’erreurs.</p>
-
-            <p><em>“Il y a très peu de gens qui sont en mesure de faire une relecture experte de certains sujets et puis il y a la réputation de l’auteur qui joue. Enfin ce sont tout un tas de facteurs qui font qu’il y a plein de papiers faux.”</em> <strong>Assia Maboubi</strong></p>
-
-            <p><strong>Les enjeux de l’accessibilité des assistants de preuve:</strong></p>
-
-            <p>Si le sujet principal de préoccupation réside dans la probabilité d’erreurs dans les publications, le problème est différent pour la vérification formelle par les assistants. Quand Coq vérifie une preuve informatique, le rapport final donné par l’assistant de preuve n’est pas rédigé de manière compréhensible pour un mathématicien. C’est pour cette raison que des travaux sont menés pour rendre Coq plus accessible et intelligible.</p>
-
-            <p><strong>Théo Zimmermann</strong>, avec lequel nous nous sommes entretenus, travaille justement sur ces problématiques. Selon lui, l’enjeu est de rendre le rapport final produit et les “scripts de preuve” par Coq vérifiable par un mathématicien sans avoir à utiliser Coq. Il explique ainsi qu’actuellement, le travail sur l'accessibilité des assistants de preuve  n’est pas à un stade assez avancé pour que des personnes non expertes puissent vérifier une preuve.
-            L’enchaînement de blocs de bases que constitue le script final de Coq devrait pouvoir être traduit en un langage similaire à celui des revues scientifiques. Le problème du langage se pose aussi lorsque des preuves “traditionnelles” sont vérifiées par les assistants de preuve. <strong>Assia Mahboubi</strong> indique ainsi que les papiers de preuve mathématique contiennent en définitive peu de symboles et que l’implicite tient beaucoup de place. Il y a des conventions et des notations propres à chaque discipline mathématique, et dont le caractère subtil implique une signification différente selon le contexte. Certaines notions restent par ailleurs vagues, car elles constituent des éléments de culture partagée des mathématiques. Dès lors, il devient assez complexe de s’assurer que l’assistant de preuve prenne bien en compte tous ces paramètres. Il est donc assez fastidieux de formaliser une preuve car il faut beaucoup détailler pour que l’assistant puisse accepter la preuve. Herman Geuvers parle ainsi d’un “gap” entre les preuves telles qu’elles sont publiées dans les revues et les preuves compréhensibles pour un ordinateur. </p>
-
-            <p>L’enjeu de l’accessibilité de l’assistant de preuve n’est pas seulement lié à la compréhension et la vérification. L’accessibilité est intimement liée à la communication et au langage. <strong>Théo Zimmermann</strong> a ainsi souligné qu’une preuve est avant tout “un objet de communication”, la preuve doit pouvoir être compréhensible et claire pour pouvoir faire consensus. Le critère de conviction est ainsi un des principaux attributs de la preuve selon <strong>Tymoczko</strong>. <strong>Assia Mahboubi</strong> souligne ainsi qu’il reste difficile pour “l’oeil humain” de se convaincre d’une preuve dans le langage formel de l’assistant. </p>
-
-            <p><strong>Herman Geuvers</strong> opère quant à lui une distinction entre convaincre et expliquer. Il souligne le fait que les preuves mathématiques “traditionnelles” attribuent autant d’importance au détail mathématique en tant que tel qu’à l’explication, puisque la conviction est liée à la compréhension de celui qui parcourt la preuve. Il écrit ainsi que les assistants de preuve <em>“vérifient bien mais expliquent mal”</em>, le problème réside dans la communication. <strong>Robert Pollack</strong> va dans le même sens en exprimant le fait que la conviction en une preuve relève d’une dimension intimement personnelle, qu’il n’est donc pas possible de complètement formaliser. Pour lui, la conviction en une preuve par informatique soulève deux problèmes principaux : un problème formel qui relève de la justesse des calculs, et un problème informel pour s’assurer que les liens entre propositions sont logiques. <strong>Pollack</strong> souligne bien l’importance de la confiance et de la compréhension en l’assistant de preuve pour le problème formel. En effet, l’acceptation de la preuve passe pour lui  en premier par la confiance en l’assistant, qui est plus facile à obtenir que la compréhension de la preuve elle-même. </p>
-
-            <p><strong>Callude et Müller</strong> détaillent ainsi des <em>“symptômes de compréhension”</em> pour matérialiser la distinction entre les deux notions. Pour ce qui est des preuves formelles, la compréhension implique pour eux la capacité à modifier le programme si celui ci ne fonctionne pas par exemple. La compréhension est ainsi pour eux le principal obstacle aux preuves formelles, car il n’est pas possible de vérifier humainement la preuve. Cela renforce donc l’importance de la clarté et l’accessibilité des assistants de preuve, qui deviennent les seuls accès possibles à la compréhension de la preuve.
-                C’est pour cette raison que les deux chercheurs plaident pour le développement d’<em>”environnements actifs de preuve”</em> (active proof environment), constitués d’un assistant de preuve (type Coq) et d’une interface intelligente. Cela permet aux utilisateurs de questionner les preuves formelles pour en obtenir une meilleure compréhension. Ils suggèrent pour cette interface, l’automatisation de chaque étape de preuve, la construction d’analogies, d’exemples, le développement de preuves alternatives, des illustrations visuelles. Les suggestions montrent ainsi que la compréhension, par extension la conviction d’une preuve, joue sur de nombreux tableaux, qui concourent tous à rendre l’assistant plus accessible. </p>
-
-            <p><strong>Le paradoxe de l’accessibilité:</strong>
-        Rendre accessible un assistant de preuve tel que Coq confronte les spécialistes à un certain paradoxe. En voulant développer l’assistant de preuve afin que le script final et que son utilisation soit plus lisible et intelligible, le risque de bugs peut potentiellement être augmenté. En effet, développer le noyau de l’assistant induit forcément une probabilité d’erreurs plus grande. Pour altérer le fonctionnement du programme, il faudrait que le bug potentiel soit exploité de telle sorte à rendre le résultat final invalide. Cela correspondrait par exemple  à valider quelque chose ne correspondant pas à la preuve de départ. <strong>Assia Mahboubi</strong> relativise cependant le risque, en expliquant que la probabilité d’une telle occurrence est infinitésimale. </p>
-
-    </div>-->
+        </div>
 
         <script src='main.js'></script>
+        <script type='text/javascript' src='libraries/animsition.js'></script>
+        <script>
+            $(document).ready(function() {
+              $('.animsition').animsition({
+                inClass: 'fade-in',
+                outClass: 'fade-out-left-lg',
+                inDuration: 2000,
+                outDuration: 800
+              });
+            });
+        </script>
     </body>
 </html>
