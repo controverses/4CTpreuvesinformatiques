@@ -10,7 +10,7 @@ html * {
 }
 
 body {
-    font-size: 1.6vmin;
+    font-size: 1.5em;
     font-family: 'Roboto Condensed', sans-serif;
     color: #7f8c97;
     background-color: #E9F0F5;
@@ -55,7 +55,7 @@ header {
 }
 
 #intro p {
-    font-size: 1.8vmin;
+    font-size: 1.8em;
     text-align: justify;
 }
 
@@ -168,7 +168,7 @@ sidebar h3 {
 }
 
 .text-container {
-    font-size: 1.1em;
+    font-size: 1.3em;
     height: 65vh;
     overflow-y: auto;
 }
