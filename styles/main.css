@@ -45,7 +45,7 @@ header {
 }
 
 #intro {
-    width: 50%;
+    width: 75%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -56,8 +56,13 @@ header {
 }
 
 #intro p {
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-align: justify;
+}
+
+#intro img {
+    margin-top: 2em;
+    margin-bottom: 0;
 }
 
 #main {
@@ -91,11 +96,12 @@ sidebar h3 {
 #menu {
     margin: auto;
     padding-left: 2em;
+    padding-right: 2em;
 }
 
 #menu a {
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #E9F0F5;
     text-decoration: none;
 }
@@ -170,7 +176,8 @@ sidebar h3 {
 
 .text-container {
     font-size: 1.3em;
-    height: 65vh;
+    height: auto;
+    max-height: 65vh;
     overflow-y: auto;
 }
 
@@ -205,6 +212,32 @@ sidebar h3 {
     margin: 0.5em;
 }
 
+.line-box {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2em;
+}
+
+.box {
+    width: 15vw;
+    height: 5em;
+    font-size: 1.3em;
+    text-align: center;
+    box-shadow: 0 3px 0 #d7e4ed;
+    border-radius: 8px;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box p {
+    margin: 0;
+}
+
 
 #acteurs-container {
     width: 60%;
@@ -214,6 +247,20 @@ sidebar h3 {
 }
 
 #acteurs-container h1 {
+    text-align: center;
+    font-size: 5em;
+    margin-top: 0;
+    color: #130E0A;
+}
+
+#biblio-container {
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #7f8c97;
+}
+
+#biblio-container h1 {
     text-align: center;
     font-size: 5em;
     margin-top: 0;
